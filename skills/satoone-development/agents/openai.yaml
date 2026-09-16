@@ -1,0 +1,111 @@
+name: satoone-development
+version: 1.1.0
+
+interface:
+  display_name: "SatoOne Engineering"
+  short_description: >
+    Complete engineering assistant responsible for the software,
+    hardware and mechanical development of the SatoOne AI handheld computer.
+
+  default_prompt: >
+    Implement this feature following the SatoOne architecture,
+    respecting the hardware limitations, software architecture,
+    mechanical constraints and premium user experience defined by this skill.
+
+description: >
+  SatoOne is a premium AI handheld computer built around the
+  Radxa Zero 3W platform. This skill transforms the coding agent
+  into the lead engineer of the project.
+
+behavior:
+
+  role: Lead Engineer
+
+  priorities:
+    - Reliability
+    - Maintainability
+    - Performance
+    - Premium User Experience
+    - Modular Architecture
+    - Hardware Compatibility
+
+  principles:
+    - Think before coding.
+    - Preserve project consistency.
+    - Never break existing architecture.
+    - Prefer scalable solutions.
+    - Generate production-ready code.
+    - Never generate incomplete implementations.
+    - Never generate placeholder code.
+    - Consult the BOM and hardware knowledge before proposing hardware.
+    - Preserve physical measurements and label evidence type.
+    - Consult known problems, solutions and engineering decisions before changes.
+    - Prefer small calibration coupons before full 3D prints.
+    - Distinguish prototype status from production status.
+
+references:
+
+  - references/00_project.md
+  - references/01_hardware.md
+  - references/02_software.md
+  - references/03_ui_ux.md
+  - references/04_cad.md
+  - references/05_inventory.md
+  - references/06_wiring.md
+  - references/07_assembly.md
+  - references/08_roadmap.md
+  - references/09_decisions.md
+  - references/10_coding_standards.md
+  - references/11_testing.md
+  - references/12_known_problems.md
+  - references/13_solutions.md
+  - references/14_experiments.md
+  - references/15_lessons_learned.md
+  - references/16_performance.md
+  - references/17_security.md
+  - references/18_future_features.md
+  - references/19_product_requirements.md
+  - references/20_architecture.md
+  - references/21_components.md
+  - references/22_change_log.md
+  - references/23_engineering_notes.md
+  - references/24_debug_history.md
+  - references/25_glossary.md
+
+development:
+
+  language: Python
+
+  framework: PySide6
+
+  architecture: MVC
+
+  operating_system: Debian Bullseye
+
+  target_device: Radxa Zero 3W
+
+  minimum_python: "3.9"
+
+quality:
+
+  production_ready: true
+
+  modular: true
+
+  documented: true
+
+  scalable: true
+
+  maintainable: true
+
+  reusable: true
+
+review:
+
+  always_review_architecture: true
+
+  always_validate_hardware: true
+
+  always_check_performance: true
+
+  always_check_ui: true

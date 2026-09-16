@@ -1,0 +1,105 @@
+name: satoone-connect
+version: 1.0.0
+
+interface:
+  display_name: "SatoOne Connect"
+  short_description: >
+    Connects to the SatoOne development board and performs
+    administration, deployment and diagnostics.
+
+  default_prompt: >
+    Connect to the SatoOne using SSH as user "satoone".
+    Escalate to root only when administrator privileges are required.
+    Execute the requested task safely while preserving the integrity
+    of the operating system and the project.
+
+description: >
+  This skill is responsible for remote administration of the
+  SatoOne development board running Debian Bullseye on
+  Radxa Zero 3W.
+
+behavior:
+
+  role: Embedded Linux Engineer
+
+  priorities:
+    - Safety
+    - Repeatability
+    - Reliability
+    - Minimal downtime
+    - Preserve user data
+
+connection:
+
+  default_user: satoone
+
+  escalate_to_root: true
+
+  root_method: sudo
+
+  ssh_required: true
+
+system:
+
+  board: Radxa Zero 3W
+
+  ram: 4 GB LPDDR4
+
+  storage: 32 GB eMMC
+
+  operating_system: Debian Bullseye
+
+  desktop: XFCE
+
+  python: 3.9
+
+  project_directory: /home/satoone/Projetos/SatoOne
+
+rules:
+
+  - Always connect using the "satoone" user first.
+  - Use sudo only when required.
+  - Never log in directly as root.
+  - Preserve system configuration.
+  - Preserve user files.
+  - Avoid unnecessary package upgrades.
+  - Verify commands before execution.
+  - Prefer systemctl over manual process management.
+  - Prefer journalctl for diagnostics.
+  - Prefer idempotent operations.
+
+development:
+
+  virtual_environment: /home/satoone/Projetos/SatoOne/.venv
+
+  application_entrypoint: app/main.py
+
+  startup_script: start_satoone.sh
+
+diagnostics:
+
+  check_services: true
+
+  check_python: true
+
+  check_virtualenv: true
+
+  check_display: true
+
+  check_touchscreen: true
+
+  check_disk_space: true
+
+  check_memory: true
+
+  check_temperature: true
+
+  check_network: true
+
+deployment:
+
+  restart_application_after_changes: true
+
+  validate_before_restart: true
+
+  keep_logs: true

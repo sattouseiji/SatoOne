@@ -1,0 +1,48 @@
+# Operating systems and editors
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+env/
+
+# Build and temporary files
+build/
+dist/
+tmp/
+temp/
+*.tmp
+*.bak
+*.log
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*
+secrets*
+*.secret
+
+# CAD slicer and machine-local files
+*.gcode
+*.3mf.bak
+
+# Generated system reports (keep curated HTML reports)
+reports/raw/
+

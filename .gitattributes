@@ -1,0 +1,18 @@
+* text=auto
+
+*.md text eol=lf
+*.sh text eol=lf
+*.py text eol=lf
+*.scad text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.js text eol=lf
+
+*.stl binary
+*.3mf binary
+*.step binary
+*.stp binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+
