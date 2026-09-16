@@ -1,4 +1,4 @@
-# Hardware — Prototype V1
+# Hardware — V0 validada e direção V1
 
 ## Atualização 2026-08-15
 
@@ -15,8 +15,10 @@ Display confirmado: Waveshare 5DP-CAPLCD-H; envelope físico medido 122.76 × 77
 | Sistema | Debian Bullseye XFCE |
 | Alimentação | 5 V USB-C |
 
-Display atual: Waveshare 5", 1024×600, HDMI, touch capacitivo USB HID, 60 Hz; modelo a confirmar. Display futuro: IPS HDMI 4", 720×720, capacitivo e compatível com Linux.
+Display atual: Waveshare 5DP-CAPLCD-H, 1024×600, HDMI, touch capacitivo USB HID. Display futuro candidato: IPS HDMI 4", 720×720, capacitivo e compatível com Linux.
 
-Teclado BlackBerry Q10: QWERTY físico, centralizado, removível, por controlador USB. Duas Samsung 18650 protegidas em paralelo (3,7 V nominal e 4,2 V máxima por célula), carregadas por UPS USB-C com boost para 5 V; modelo do UPS pendente. Há hub USB interno, dois alto-falantes de 3 W, dissipador de cobre e ventoinha opcional de 30 mm.
+Na V0, o teclado BlackBerry Q10/BBQ20KBD é QWERTY físico por USB. A alimentação usa UPS e duas 18650, apresenta autonomia observada de 1h04 e não fornece telemetria útil ao Debian.
+
+Direção definida em 2026-09-15 para a V1: Li-Po pouch protegida 1S de 10.000 mAh, carregador USB-C 1S com power-path, boost de 3,0–4,2 V para 5,0 V/5 A recomendado, fusível 7,5 A, XT30, AWG18, fuel gauge e monitor INA226/equivalente dimensionado para a corrente real. A Rontek A58 é apenas candidata; conferir rótulo, dimensões, polaridade e corrente antes da compra. Ventoinha de 30 mm somente se ensaio sustentado exigir.
 
 Manter USB-C, micro-HDMI, microSD, áudio, UART, USB OTG, GPIO, I2C, SPI e PWM disponíveis conforme a integração. Sensores: bateria, corrente, temperatura e touch; IMU, GPS e NFC futuros. Confirmar sempre Linux, pinagem, nível lógico, tensão e corrente antes da integração; preferir HDMI e USB HID e evitar drivers proprietários.

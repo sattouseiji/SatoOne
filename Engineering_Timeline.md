@@ -1,8 +1,8 @@
 # Engineering Timeline — SatoOne
 
-**Versão:** 1.1  
+**Versão:** 1.2
 **Status:** Linha do tempo canônica  
-**Última atualização:** 2026-08-04
+**Última atualização:** 2026-09-16
 
 ## Regra de data
 
@@ -31,14 +31,20 @@ O material histórico importado não contém datas originais. Por integridade, e
 | 17 | 2026-08-04 | Registros canônicos elaborados | Este conjunto de quatro arquivos criado |
 | 18 | 2026-08-04 | Impressora e filamentos comprados | Bambu Lab A1 Mini; filamentos branco, preto e cinza; entrega prevista para 2026-08-05 |
 | 19 | 2026-08-04 | BMCU 370C AMS Lite comprado para testes de cor | Para Bambu Lab A1/A1 Mini; sensor Hall e bufferização bidirecional informados pelo anúncio; entrega pendente |
+| 20 | 2026-09-15 | Case V0 definitiva e protótipo operacional registrados | STLs preservados; fotos e vídeo reais; Radxa, display, touch e teclado em funcionamento |
+| 21 | 2026-09-15 | Health check integral executado | Recursos com folga; SoC 70,6 °C e pico de 77,5 °C; relatório consolidado |
+| 22 | 2026-09-15 | Autonomia V0 registrada | Duração física informada de 1h04; meta V1 definida em ≥2 h |
+| 23 | 2026-09-15 | Arquitetura de energia V1 definida | Li‑Po 1S 10.000 mAh, power-path, boost 5 V, proteção, fusível e telemetria I²C planejados |
+| 24 | 2026-09-15 | Direção mecânica/térmica V1 definida | Bateria atrás do teclado, case mais fina, cooling passivo e fan opcional |
+| 25 | 2026-09-16 | Estratégia comercial consolidada e publicada | Site corporativo, licença proprietária atual, Discussions, health check público, fotos e vídeo |
 
 ## Próximos marcos planejados
 
-1. Receber, conferir e registrar a Bambu Lab A1 Mini e os filamentos em 2026-08-05.
-2. Testar e decidir display de 4" com evidência física.
-3. Criar experimento de splash QPainter/partículas com métricas no Radxa.
-4. Definir arquitetura elétrica segura: UPS, 18650, proteção e carregamento.
-5. Criar e testar primeira revisão de CAD do gabinete.
+1. Confirmar especificações e adquirir componentes da cadeia de energia V1.
+2. Validar power-path, boost, proteção e sensores em bancada.
+3. Integrar telemetria I²C ao Debian e ao dashboard.
+4. Criar a fonte CAD da case V1 e testar coupons.
+5. Montar e executar os critérios de aceitação da V1.
 
 ## Template de evento
 

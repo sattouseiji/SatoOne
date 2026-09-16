@@ -7,13 +7,20 @@ description: Auditar integralmente a saúde do SatoOne/Radxa por SSH e produzir 
 
 Usar `../satone-connect/SKILL.md` para conexão, identidade e elevação. Nunca salvar senha em scripts, relatórios ou comandos documentados.
 
+## Escolher o modo
+
+- **Interno:** padrão para diagnóstico. Preservar evidências técnicas suficientes, restringir o arquivo ao ambiente de engenharia e ainda remover credenciais e chaves.
+- **Público comercial:** usar ao publicar no GitHub Pages. Consolidar resultados para compradores, parceiros e financiadores e remover IP, SSID, MAC, portas, usuários, postura SSH/firewall, logs brutos e outros detalhes exploráveis.
+
+Nos dois modos, separar `V0 observada`, `V1 planejada` e `meta`. A V0 tem autonomia informada de 1h04; a V1 prevê 10.000 mAh, telemetria Debian, case menor e cooling condicionado a testes. Não apresentar isso como implementado.
+
 ## Fluxo
 
 1. Confirmar `whoami`, `hostnamectl --static` e horário.
 2. Executar `scripts/collect-health.sh` no host. Começar sem root e elevar apenas para logs ou dados protegidos.
 3. Não corrigir, reiniciar, instalar ou remover nada durante a auditoria.
 4. Separar resultado em `Saudável`, `Atenção`, `Crítico` e `Não verificável`.
-5. Gerar HTML autocontido, responsivo, sem CDN, fontes remotas ou segredos.
+5. Gerar HTML autocontido, responsivo, sem CDN, fontes remotas ou segredos, adequado ao modo escolhido.
 6. Incluir horário, escopo, métricas, evidências, limitações e recomendações priorizadas.
 7. Tratar score como heurística explicável, nunca como medição física.
 8. Salvar relatórios em `reports/` com data no nome e preservar relatórios anteriores.
@@ -43,8 +50,9 @@ Para dados protegidos, abrir sessão como `satoone` e usar `sudo -i` ou `sudo su
 ## Guardrails
 
 - Redigir MACs, chaves, tokens, senhas e dados pessoais desnecessários.
+- Nunca publicar inventário detalhado de rede, portas, SSH, firewall ou logs; substituir por estados consolidados e recomendações seguras.
 - Não afirmar saúde de bateria quando o UPS não expõe telemetria ao Linux.
+- Não afirmar que a bateria V1, os módulos de telemetria, a nova case ou o fan foram comprados/instalados antes de evidência.
 - Não interpretar ausência de log como ausência de erro sem confirmar permissões.
 - Destacar temperatura sustentada alta, filesystem acima de 85%, swap sob pressão, perda de pacotes, serviços falhos e reinicializações inesperadas.
 - Recomendar correções; só aplicá-las quando o usuário pedir explicitamente.
-

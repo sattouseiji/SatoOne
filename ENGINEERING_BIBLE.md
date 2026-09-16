@@ -7,6 +7,7 @@ Este é o índice normativo da engenharia do SatoOne. Antes de propor, implement
 | Tema | Fonte primária |
 | --- | --- |
 | Produto e visão | `PRD.md`, `Vision.md` |
+| Estratégia comercial | `docs/product/README.md` |
 | Regras | `Constraints.md` |
 | Especificações de disciplina | `specifications/` |
 | Arquitetura e API | `docs/architecture/`, `docs/api/` |
@@ -23,6 +24,8 @@ Este é o índice normativo da engenharia do SatoOne. Antes de propor, implement
 
 Projetar para operação local, falha segura, manutenção, reparo e evolução. Validar no dispositivo quando uma conclusão depender do hardware. Distinguir claramente entre fato confirmado, hipótese e planejamento.
 
+O SatoOne é um produto proprietário em desenvolvimento. A documentação pública deve permitir acompanhamento do progresso sem expor credenciais, rede interna, detalhes de hardening ou material que não precise ser público.
+
 ## Processo obrigatório
 
 1. Ler as fontes acima e localizar experiências anteriores em `knowledge/`.
@@ -30,12 +33,14 @@ Projetar para operação local, falha segura, manutenção, reparo e evolução.
 3. Atualizar a especificação e inventário afetados.
 4. Registrar teste, resultado e limitações de reprodução.
 5. Adicionar uma entrada no changelog para mudanças relevantes.
+6. Para mudanças da V1, atualizar o plano de desenvolvimento, a disciplina afetada e os critérios de aceitação.
 
 ## Convenções
 
 - Markdown UTF-8; títulos claros; datas em `YYYY-MM-DD`.
 - Use IDs: componentes `H###`, decisões `ADR-###`, problemas `BUG-###`, experimentos `EXP-###`.
 - Não declarar compatibilidade, autonomia, temperatura, desempenho ou compra como confirmados sem evidência documentada.
+- Registrar data da decisão separadamente da data de publicação. A direção técnica V1 atual foi definida em 2026-09-15 e consolidada publicamente em 2026-09-16.
 
 ## Glossário resumido
 

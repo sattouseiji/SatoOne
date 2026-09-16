@@ -10,6 +10,10 @@ O aviso anterior sobre revalidação dos furos do teclado fica **SUPERSEDED para
 
 O CAD paramétrico/editável correspondente não estava presente na pasta da entrega V0. Os STLs definitivos não devem ser sobrescritos quando a fonte editável for recuperada ou recriada.
 
+## Direção comercial V1 — decisão de 2026-09-15
+
+Remover o volume do UPS/18650, posicionar a pouch atrás do teclado e buscar 25–28 mm na região da bateria, ainda como estimativa sujeita a stack-up físico. Projetar refrigeração passiva e reservar fan de 30 mm sem instalá-lo por padrão. Criar CAD novo, manter a V0 intacta e validar com coupons antes da impressão completa.
+
 ## Atualização 2026-08-15
 
 Usar CAD paramétrico e calibration coupons antes da impressão completa. O padrão de furos do teclado está NEEDS_REVALIDATION.

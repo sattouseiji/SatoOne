@@ -15,3 +15,5 @@
 | OLED Status | Planejado | Barramento e consumo a validar |
 | Fan | Planejado | Controle térmico e ruído |
 | Thermal Camera | Planejado | Módulo, custo e caso de uso |
+| Série piloto | Planejado | V1 validada, BOM, fornecedores, custo e montagem repetível |
+| Lista de interesse | Em estruturação | GitHub Discussions hoje; canal comercial dedicado no futuro |

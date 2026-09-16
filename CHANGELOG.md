@@ -4,14 +4,18 @@ O projeto segue versionamento incremental. Registre decisões, marcos e mudança
 
 ## [Unreleased]
 
-### Posicionamento comercial e plano público V1 — 2026-09-16
+### Direção técnica da V1 — 2026-09-15
+
+- Registrada a autonomia física da V0 de 1h04 e definida a meta mínima de duas horas para a V1.
+- Selecionada para investigação uma Li-Po pouch 1S de 10.000 mAh, com carregador USB-C com power-path, boost regulado em 5 V, proteção, fusível e fiação de alta corrente.
+- Planejada telemetria no Debian por fuel gauge e monitor de corrente/potência via I²C.
+- Definidas como prioridades da case V1 a redução de espessura, bateria atrás do teclado, dissipação passiva e ventoinha opcional condicionada a testes térmicos.
+- Registrados fotos e vídeo reais do protótipo V0 como evidência do estágio funcional.
+
+### Posicionamento comercial e publicação — 2026-09-16
 
 - Reposicionado o SatoOne como produto proprietário em desenvolvimento, com página corporativa, canal de interesse e licença de direitos reservados para as novas versões.
 - Reformulado o health check público para apresentar resultados consolidados da V0 sem divulgar rede ou parâmetros internos de segurança.
-- Registrada a autonomia física atual de 1h04 e a meta mínima de duas horas para a V1.
-- Planejada arquitetura com Li‑Po 1S de 10.000 mAh, carregador USB-C com power-path, boost regulado em 5 V, proteção, fusível e fiação de alta corrente.
-- Planejada telemetria de bateria no Debian por fuel gauge e monitor de corrente/potência via I²C.
-- Definidas como prioridades da case V1 a redução de espessura, bateria atrás do teclado, dissipação passiva e ventoinha opcional condicionada aos testes térmicos.
 - Adicionado painel fotográfico com vistas reais do protótipo V0.
 - Adicionado vídeo real de demonstração da V0 executando Debian e respondendo à interface touch e ao teclado físico.
 
@@ -26,7 +30,7 @@ O projeto segue versionamento incremental. Registre decisões, marcos e mudança
 - Confirmada a case V0 fisicamente funcional como versão definitiva do protótipo.
 - Preservados e renomeados os STLs de Front, Back e Clamps com nomes estáveis para publicação.
 - Adicionada documentação de rastreabilidade dos nomes originais e da ausência atual do CAD paramétrico.
-- Preparada a estrutura inicial de publicação open-source com README, licença e regras do Git.
+- Preparada a estrutura inicial de publicação, posteriormente reposicionada como proprietária em 2026-09-16.
 - Adicionados health check completo, relatório HTML e skill reutilizável de diagnóstico.
 
 ### V1 — 2026-08-15

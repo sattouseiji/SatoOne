@@ -1,15 +1,22 @@
 # Mechanical
 
-V0 foi impressa na Bambu Lab A1 Mini e validada fisicamente em 2026-08-15. A V1 está separada em `SatoOne_Case_V1`, preservando a V0. Correções validadas: Radxa piloto Ø2.30 mm; UPS com postes de 12.00 mm; hub com espaçamento 51.03 × 14.92 mm e piloto Ø2.20 mm.
+## V0 definitiva
 
-## Estado em 2026-08-15
+A V0 física está funcional e seus três STLs permanecem preservados em `SatoOne_Case_V0/`. O envelope externo da traseira é aproximadamente 130 × 155 × 44 mm. O CAD paramétrico correspondente não está presente; não tratar STL como fonte editável.
 
-O gabinete está na fase V0 de validação dimensional. A fonte única de dimensões é o CAD paramétrico em `SatoOne_Case_V0/SatoOne_Case_V0.scad`; os envelopes usados foram medidos fisicamente com paquímetro. A pasta contém front/back STL e preview de montagem.
+## V1 comercial — decisão de 2026-09-15
 
-Fases: V0 dimensional, V1 encaixes, V2 montagem funcional, V3 refinamento mecânico e V4 acabamento/premium. Antes de imprimir o gabinete completo, executar coupons de encaixe, standoffs, parafusos, insertos, tolerâncias, ímãs e passagens USB-C.
+- colocar a bateria pouch atrás do teclado;
+- remover o volume do UPS e das duas 18650;
+- buscar 25–28 mm na região da bateria, como meta preliminar;
+- manter bateria, eletrônica, display e teclado removíveis;
+- não comprimir nem colar permanentemente a Li‑Po;
+- preservar acesso a portas e alívio de cabos;
+- melhorar caminho térmico e ventilação passiva;
+- reservar fan de 30 mm, instalando-o somente se ensaios exigirem.
 
-O UPS, com 30.22 mm de espessura máxima, atualmente influencia a espessura. Avaliar distribuição XY, roteamento de HDMI/USB-C, ventilação, dissipação e clearance dos GPIO da Radxa; não remover os pinos GPIO.
+Criar nova fonte paramétrica para a V1 sem sobrescrever a V0. Produzir coupons para bateria, conectores, standoffs, insertos, ventilação e cabos antes da impressão completa. Consultar `docs/cad/V1_ENCLOSURE_PLAN.md`.
 
-O padrão de furos do teclado está `NEEDS_REVALIDATION` por inconsistência entre a diagonal medida anteriormente (68.91 mm) e as componentes X/Y. O desenho mecânico do display deve ser o da variante Waveshare 5DP-CAPLCD-H.
+## Fabricação
 
-Gabinete compacto, com bordas arredondadas, manutenção possível, roteamento interno de cabos, compartimento de bateria, refrigeração passiva e reserva para ventoinha futura. Validar limites da Bambu Lab A1 Mini antes do CAD final.
+Projetar dentro do volume da Bambu Lab A1 Mini. PLA serve para protótipos; escolher material de produção somente após térmica, impacto, acabamento e processo de montagem serem validados.

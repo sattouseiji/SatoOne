@@ -19,3 +19,11 @@ Bambu Lab A1 Mini. Motivo: qualidade de impressão adequada ao objetivo comercia
 ## Arquitetura
 
 MVC e plugins modulares. Motivo: manutenção, testes, substituição de hardware e evolução sem dependências rígidas.
+
+## Produto e publicação — 2026-09-15/16
+
+Produto proprietário com desenvolvimento público sanitizado. Motivo: apresentar maturidade a compradores, parceiros e financiadores sem abrir ativos internos ou dados operacionais sensíveis.
+
+## Energia, telemetria e case V1 — 2026-09-15
+
+Substituir na V1 o UPS/18650 por cadeia 1S dedicada e mensurável; colocar a pouch atrás do teclado e reduzir a espessura. Motivo: autonomia V0 de 1h04, volume do conjunto atual e ausência de telemetria no Debian. Cooling ativo permanece opcional e condicionado a ensaios.

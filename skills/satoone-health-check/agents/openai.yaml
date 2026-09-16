@@ -1,4 +1,4 @@
 interface:
   display_name: "SatoOne Health Check"
-  short_description: "Auditoria completa e relatorio visual do SatoOne"
-  default_prompt: "Use $satoone-health-check para auditar o SatoOne e gerar um relatorio HTML completo."
+  short_description: "Auditoria técnica e relatório visual do SatoOne"
+  default_prompt: "Use $satoone-health-check para auditar o SatoOne e gerar um relatório HTML no modo interno ou público apropriado."

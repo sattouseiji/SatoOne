@@ -9,6 +9,9 @@
 - Branch principal: `main`
 - Visibilidade: pública
 - Autor Git: `sattouseiji <sattoumarcelo@gmail.com>`
+- GitHub Pages: `https://sattouseiji.github.io/SatoOne/`
+- Relatório público atual: `https://sattouseiji.github.io/SatoOne/reports/satoone-health-2026-09-15.html`
+- Posicionamento atual: produto proprietário em desenvolvimento, com vitrine pública comercial.
 
 ## Ferramentas
 
@@ -28,3 +31,4 @@ A chave privada fica fora do projeto e nunca deve ser lida, exibida ou versionad
 
 Sempre consultar o estado atual; estes dados históricos não substituem `git status`, `git remote -v`, `git log` e `gh auth status`.
 
+Antes de publicar, conferir licença proprietária, linguagem comercial, sanitização dos relatórios, disponibilidade das imagens/vídeo e sucesso do build do GitHub Pages.

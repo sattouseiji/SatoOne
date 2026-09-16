@@ -2,15 +2,9 @@ name: satoone-development
 version: 1.1.0
 
 interface:
-  display_name: "SatoOne Engineering"
-  short_description: >
-    Complete engineering assistant responsible for the software,
-    hardware and mechanical development of the SatoOne AI handheld computer.
-
-  default_prompt: >
-    Implement this feature following the SatoOne architecture,
-    respecting the hardware limitations, software architecture,
-    mechanical constraints and premium user experience defined by this skill.
+  display_name: "SatoOne Product Engineering"
+  short_description: "Engenharia do produto comercial SatoOne"
+  default_prompt: "Use $satoone-development para desenvolver esta mudança com evidências, restrições técnicas e acabamento comercial."
 
 description: >
   SatoOne is a premium AI handheld computer built around the
@@ -71,6 +65,7 @@ references:
   - references/23_engineering_notes.md
   - references/24_debug_history.md
   - references/25_glossary.md
+  - references/26_commercial_product.md
 
 development:
 

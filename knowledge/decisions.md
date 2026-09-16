@@ -30,3 +30,25 @@
 - **Decisão:** usar `SatoOne_Case_V0/SatoOne_Case_V0.scad` como fonte única de dimensões e iterar V0→V4, começando por coupons de encaixe.
 - **Motivo/evidência:** Bambu Lab A1 Mini recebida; envelopes de display, teclado, Radxa, UPS e hub medidos com paquímetro.
 - **Limites:** teclado precisa revalidar furos; display precisa desenho oficial da variante H; UPS domina a espessura.
+
+## ADR-005 — Produto proprietário e acompanhamento público
+
+- **Data da decisão:** 2026-09-15.
+- **Publicação consolidada:** 2026-09-16.
+- **Decisão:** desenvolver o SatoOne como produto vendável proprietário; usar site, health check e Discussions para mostrar evolução e medir interesse.
+- **Motivo:** construir valor comercial e preservar a engenharia futura.
+- **Limite:** versões antigas publicadas sob MIT mantêm seus termos originais.
+
+## ADR-006 — Energia e telemetria da V1
+
+- **Data:** 2026-09-15.
+- **Decisão:** Li‑Po 1S 10.000 mAh, proteção/fusível, carregador power-path, boost 5 V, fuel gauge e monitor de potência I²C.
+- **Motivo:** autonomia V0 de 1h04, volume do UPS e ausência de telemetria no Debian.
+- **Estado:** em validação; candidatos não comprados.
+
+## ADR-007 — Case e cooling da V1 comercial
+
+- **Data:** 2026-09-15.
+- **Decisão:** bateria atrás do teclado, redução da espessura, dissipação passiva e fan somente se necessário.
+- **Metas:** 25–28 mm na região da bateria; SoC sustentado ≤75 °C sem throttling; autonomia ≥2 h.
+- **Estado:** metas ainda não validadas fisicamente.

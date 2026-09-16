@@ -5,14 +5,15 @@ description: Develop, refactor, design, or troubleshoot the SatoOne embedded AI 
 
 # Desenvolvimento do SatoOne
 
-Construa o SatoOne como um computador portátil de IA comercial e offline-first, não como uma demonstração de Raspberry Pi. Priorize desempenho, arquitetura limpa, manutenção, UX premium e compatibilidade com Linux embarcado.
+Construa o SatoOne como um produto proprietário, portátil, comercial e offline-first, não como uma demonstração de placa embarcada. Priorize desempenho, arquitetura limpa, manutenção, UX premium, compatibilidade Linux e evidências verificáveis.
 
 ## Plataforma e restrições
 
 - Placa: Radxa Zero 3W, Debian Bullseye com XFCE e Python 3.9+.
 - Recursos disponíveis: 4 GB de RAM e 32 GB de armazenamento interno. Trate RAM, espaço em disco, CPU e temperatura como recursos limitados.
 - Tela atual: Waveshare HDMI de 5", 1024x600, touch capacitivo. Planeje componentes responsivos para a futura tela HDMI IPS de 4", 720x720.
-- Hardware previsto: teclado físico BlackBerry Q10, bateria 18650, carregamento USB-C, monitoramento de bateria e gabinete impresso em 3D para Bambu Lab A1 Mini.
+- V0 comprovada: teclado BlackBerry Q10/BBQ20KBD, UPS com duas 18650 e case impressa; autonomia observada de 1h04.
+- V1 planejada em 2026-09-15: Li-Po pouch 1S de 10.000 mAh atrás do teclado, carga USB-C com power-path, boost 5 V, telemetria no Debian e case menor e mais fina. Trate tudo como planejado/candidato até compra e validação.
 
 ## Arquitetura
 
@@ -105,6 +106,7 @@ Comece sempre por [00_project.md](references/00_project.md). Carregue os demais 
 - [23_engineering_notes.md](references/23_engineering_notes.md): memória técnica por domínio.
 - [24_debug_history.md](references/24_debug_history.md): depuração cronológica.
 - [25_glossary.md](references/25_glossary.md): termos do projeto.
+- [26_commercial_product.md](references/26_commercial_product.md): posicionamento comercial e política de publicação.
 
 Após trabalho relevante, atualize a especificação afetada, `knowledge/` e `CHANGELOG.md`. Para decisões, registre motivo, alternativas, decisão, evidência e melhoria futura.
 
