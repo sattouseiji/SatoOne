@@ -31,9 +31,9 @@ O projeto está em fase de desenvolvimento e validação. O produto ainda não e
 
 ## Acompanhe e manifeste interesse
 
-As principais etapas serão comunicadas publicamente. Pessoas interessadas em comprar o produto, acompanhar sua evolução, apoiar o projeto ou conversar sobre parcerias podem participar das [discussões oficiais](https://github.com/sattouseiji/SatoOne/discussions).
+As principais etapas serão comunicadas publicamente. Para registrar interesse na versão final, futuras oportunidades de acesso antecipado, health checks, notícias e vídeos, escreva para [sattoumarcelo@gmail.com](mailto:sattoumarcelo@gmail.com) ou participe das [discussões oficiais](https://github.com/sattouseiji/SatoOne/discussions). O programa de atualizações ainda está em preparação.
 
-Manifestar interesse não constitui reserva, compra, investimento ou garantia de lançamento.
+Preço e formas de pagamento serão anunciados em breve. Manifestar interesse não constitui reserva, compra, investimento, garantia de acesso antecipado ou garantia de lançamento.
 
 ## Propriedade intelectual
 

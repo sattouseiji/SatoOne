@@ -4,6 +4,12 @@ O projeto segue versionamento incremental. Registre decisões, marcos e mudança
 
 ## [Unreleased]
 
+### Contato e acompanhamento pré-lançamento — 2026-09-16
+
+- Adicionado contato público por e-mail para interessados, parceiros e potenciais compradores.
+- Apresentados acesso antecipado, health checks, notícias e vídeos como programa em preparação até o lançamento.
+- Marcados preço e formas de pagamento como informações futuras, sem criar promessa de reserva ou disponibilidade.
+
 ### Compras e arquitetura elétrica V1 — 2026-09-16
 
 - Registradas como compradas/em trânsito a Li-Po Rontek/A58 1S 10.000 mAh, o módulo IP5310 e o INA219 R100, com entrega prevista até 2026-09-19.

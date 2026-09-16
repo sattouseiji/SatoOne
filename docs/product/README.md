@@ -12,6 +12,9 @@ O repositório público não é um convite para desenvolvimento comunitário. Ma
 - **V1 comercial:** revisão em planejamento técnico, definida em 2026-09-15.
 - **Venda:** ainda indisponível; não há preço, reserva ou cronograma confirmado.
 - **Canal público:** site, health check consolidado e GitHub Discussions.
+- **Contato de interesse:** `sattoumarcelo@gmail.com`.
+- **Atualizações planejadas:** health check diário, notícias e vídeos até o lançamento; programa ainda em preparação.
+- **Preço e pagamento:** serão anunciados em breve.
 
 ## Promessa central
 
@@ -20,6 +23,8 @@ Entregar computação Linux completa em um formato portátil com tela touch, tec
 ## Comunicação pública
 
 Publicar fatos, fotos, vídeos, metas e resultados consolidados. Não publicar credenciais, rede interna, configuração de segurança, dados pessoais, esquemas sensíveis ou alegações não validadas.
+
+O acesso antecipado depende de disponibilidade e regras futuras. Registrar interesse não constitui reserva, compra nem garantia de acesso ou lançamento.
 
 Sempre distinguir:
 
