@@ -17,6 +17,8 @@ A versão V0 é um protótipo físico funcional. Já foram integrados e validado
 - funcionamento portátil por bateria;
 - gabinete próprio produzido por impressão 3D.
 
+A [página oficial](https://sattouseiji.github.io/SatoOne/) apresenta fotos e uma demonstração em vídeo do protótipo real em funcionamento.
+
 O desenvolvimento atual prioriza autonomia, telemetria de bateria no Debian, gerenciamento térmico, redução de volume, acabamento e preparação para uma futura série piloto. A V1 está sendo planejada com bateria Li‑Po 1S de 10.000 mAh, eletrônica de alimentação redesenhada e uma case menor e mais fina. A autonomia mínima pretendida é de duas horas, ainda sujeita à validação no protótipo físico.
 
 ## Visão do produto

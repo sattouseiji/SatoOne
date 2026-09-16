@@ -13,6 +13,7 @@ O projeto segue versionamento incremental. Registre decisões, marcos e mudança
 - Planejada telemetria de bateria no Debian por fuel gauge e monitor de corrente/potência via I²C.
 - Definidas como prioridades da case V1 a redução de espessura, bateria atrás do teclado, dissipação passiva e ventoinha opcional condicionada aos testes térmicos.
 - Adicionado painel fotográfico com vistas reais do protótipo V0.
+- Adicionado vídeo real de demonstração da V0 executando Debian e respondendo à interface touch e ao teclado físico.
 
 ### GitHub workflow — 2026-09-15
 
