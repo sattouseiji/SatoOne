@@ -1,56 +1,38 @@
 # SatoOne
 
-SatoOne é um computador portátil e open-source baseado na Radxa Zero 3W, com Linux Debian, tela touch Waveshare de 5", teclado físico BlackBerry/BBQ20KBD e alimentação por bateria/UPS.
+**Um computador pessoal portátil em desenvolvimento.**
 
-[**Site oficial**](https://sattouseiji.github.io/SatoOne/) · [**Health check completo**](https://sattouseiji.github.io/SatoOne/reports/satoone-health-2026-09-15.html) · [Documentação](docs/README.md)
+SatoOne combina Linux, tela touch e teclado físico em um equipamento compacto, concebido para produtividade móvel, automações e acesso a um ambiente computacional completo.
 
-## Estado do projeto
+[**Conheça o SatoOne**](https://sattouseiji.github.io/SatoOne/) · [**Acompanhe o desenvolvimento**](https://github.com/sattouseiji/SatoOne/discussions)
 
-A V0 física está montada e funcional. Foram validados no equipamento:
+## Estado atual
+
+A versão V0 é um protótipo físico funcional. Já foram integrados e validados:
 
 - Radxa Zero 3W com Debian;
-- display HDMI em 1024 × 600;
-- touchscreen USB;
-- teclado BBQ20KBD por hub USB;
-- Wi-Fi e acesso SSH;
-- alimentação portátil por UPS;
-- gabinete V0 definitivo impresso em 3D.
+- display touch de 5 polegadas;
+- teclado físico integrado;
+- conectividade Wi-Fi e periféricos USB;
+- funcionamento portátil por bateria;
+- gabinete próprio produzido por impressão 3D.
 
-O hardware funciona, mas ainda há melhorias planejadas para refrigeração, telemetria de bateria, gerenciamento de energia e acabamento da próxima versão.
+O desenvolvimento atual prioriza autonomia, gerenciamento térmico, redução de volume, acabamento e preparação para uma futura série piloto.
 
-## Estrutura
+## Visão do produto
 
-- `SatoOne_Case_V0/`: arquivos STL definitivos da case V0;
-- `skills/`: procedimentos especializados para desenvolvimento, conexão e health check;
-- `specifications/`: especificações por domínio;
-- `knowledge/`: decisões, problemas, soluções e histórico técnico;
-- `docs/`: documentação geral;
-- `reports/`: relatórios técnicos gerados;
-- `ENGINEERING_BIBLE.md`: princípios normativos do projeto;
-- `PRD.md`, `Vision.md` e `Constraints.md`: produto, visão e restrições.
+O objetivo é oferecer um computador realmente pessoal: compacto, configurável e capaz de executar ferramentas Linux sem depender do formato tradicional de notebook.
 
-## Hardware principal
+O projeto está em fase de desenvolvimento e validação. O produto ainda não está disponível para venda, e especificações, formato, preço e cronograma podem mudar.
 
-- Radxa Zero 3W;
-- 4 GB RAM;
-- Waveshare 5DP-CAPLCD-H, 5", 1024 × 600;
-- Solder Party BBQ20KBD;
-- hub USB 2.0;
-- UPS com duas células 18650;
-- gabinete impresso em 3D.
+## Acompanhe e manifeste interesse
 
-Consulte [a especificação de hardware](specifications/hardware/README.md) e [a documentação da case V0](SatoOne_Case_V0/README.md) antes de alterar o projeto.
+As principais etapas serão comunicadas publicamente. Pessoas interessadas em comprar o produto, acompanhar sua evolução, apoiar o projeto ou conversar sobre parcerias podem participar das [discussões oficiais](https://github.com/sattouseiji/SatoOne/discussions).
 
-## Health check
+Manifestar interesse não constitui reserva, compra, investimento ou garantia de lançamento.
 
-O diagnóstico mais recente está disponível como uma [página interativa](https://sattouseiji.github.io/SatoOne/reports/satoone-health-2026-09-15.html), com visão geral, temperatura, utilização de recursos, periféricos, rede, segurança, evidências e ações recomendadas. O processo de coleta pode ser reproduzido pela [skill de health check](skills/satoone-health-check/SKILL.md).
+## Propriedade intelectual
 
-## Segurança
+SatoOne é um projeto de produto proprietário. O conteúdo desta versão é disponibilizado somente para acompanhamento e avaliação. Consulte o arquivo [LICENSE](LICENSE) para os termos aplicáveis.
 
-Nenhuma senha, token ou chave privada deve ser versionada. O acesso SSH ao dispositivo usa uma chave privada mantida fora deste repositório.
-
-## Licença
-
-Copyright © 2026 Marcelo Sato.
-
-Este projeto é disponibilizado sob a [Licença MIT](LICENSE).
+Versões anteriores que tenham sido expressamente publicadas sob outra licença permanecem sujeitas aos termos válidos no momento de sua publicação.
