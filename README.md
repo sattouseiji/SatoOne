@@ -19,7 +19,7 @@ A versão V0 é um protótipo físico funcional. Já foram integrados e validado
 
 A [página oficial](https://sattouseiji.github.io/SatoOne/) apresenta fotos e uma demonstração em vídeo do protótipo real em funcionamento.
 
-O desenvolvimento atual prioriza autonomia, telemetria de bateria no Debian, gerenciamento térmico, redução de volume, acabamento e preparação para uma futura série piloto. A V1 está sendo planejada com bateria Li‑Po 1S de 10.000 mAh, eletrônica de alimentação redesenhada e uma case menor e mais fina. A autonomia mínima pretendida é de duas horas, ainda sujeita à validação no protótipo físico.
+O desenvolvimento atual prioriza autonomia, telemetria de bateria no Debian, gerenciamento térmico, redução de volume, acabamento e preparação para uma futura série piloto. Para a V1, uma bateria Li-Po 1S de 10.000 mAh, um módulo IP5310 e um INA219 foram comprados em 16/09/2026 e aguardam recebimento/validação. A autonomia mínima pretendida é de duas horas, ainda sujeita a ensaio físico.
 
 As decisões técnicas dessa direção foram tomadas em 15 de setembro de 2026 e consolidadas publicamente em 16 de setembro de 2026. Consulte o [plano de desenvolvimento V1](docs/development/V1_DEVELOPMENT_PLAN.md), o [sistema de energia](docs/electronics/V1_POWER_SYSTEM.md), o [plano da nova case](docs/cad/V1_ENCLOSURE_PLAN.md) e os [critérios de aceitação](docs/development/V1_ACCEPTANCE_PLAN.md).
 

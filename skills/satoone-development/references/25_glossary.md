@@ -9,3 +9,6 @@
 - **V1 comercial:** próxima revisão planejada, ainda sujeita a compra, integração e testes.
 - **Power-path:** arquitetura que gerencia simultaneamente fonte externa, carga da bateria e alimentação do sistema.
 - **Fuel gauge:** circuito que estima estado de carga da bateria a partir de medições/modelo.
+- **[PURCHASED] [IN TRANSIT]:** compra confirmada, ainda sem inspeção física; não implica compatibilidade.
+- **[CURRENT DESIGN]:** arquitetura escolhida para o próximo teste, ainda sujeita a validação.
+- **SUPERSEDED:** informação preservada como histórico, mas não vigente.

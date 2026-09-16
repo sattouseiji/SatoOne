@@ -4,9 +4,18 @@ O projeto segue versionamento incremental. Registre decisões, marcos e mudança
 
 ## [Unreleased]
 
+### Compras e arquitetura elétrica V1 — 2026-09-16
+
+- Registradas como compradas/em trânsito a Li-Po Rontek/A58 1S 10.000 mAh, o módulo IP5310 e o INA219 R100, com entrega prevista até 2026-09-19.
+- Consolidada a arquitetura atual `Li-Po → IP5310 → switch → distribuição existente`, preservando a fiação pós-switch funcional.
+- Documentados o caminho HDMI via flat, USB Touch/VBUS, ramos independentes de 5 V, switch no positivo, medições de 4,8 V e colapso por bateria baixa.
+- Marcado 1h04 como registro anterior não definitivo; o ensaio final de autonomia V0 permanece pendente.
+- Tornadas superseded para a primeira integração as recomendações de charger/boost separados, fusível 7,5 A, XT30, AWG18, MAX17048 e INA226.
+- Criada referência de energia com plano ordenado de recebimento, bancada, telemetria, shutdown e CAD.
+
 ### Direção técnica da V1 — 2026-09-15
 
-- Registrada a autonomia física da V0 de 1h04 e definida a meta mínima de duas horas para a V1.
+- Registrada inicialmente autonomia de 1h04; em 2026-09-16 esse valor foi marcado como não definitivo, mantendo a meta V1 de duas horas.
 - Selecionada para investigação uma Li-Po pouch 1S de 10.000 mAh, com carregador USB-C com power-path, boost regulado em 5 V, proteção, fusível e fiação de alta corrente.
 - Planejada telemetria no Debian por fuel gauge e monitor de corrente/potência via I²C.
 - Definidas como prioridades da case V1 a redução de espessura, bateria atrás do teclado, dissipação passiva e ventoinha opcional condicionada a testes térmicos.

@@ -19,6 +19,7 @@ Este é o índice normativo da engenharia do SatoOne. Antes de propor, implement
 | Linha do tempo canônica | `Engineering_Timeline.md` |
 | Histórico de mudanças | `CHANGELOG.md` |
 | Itens futuros | `Future.md` |
+| Energia V0/V1 | `skills/satoone-development/references/27_power.md`, `specifications/electrical/README.md` |
 
 ## Filosofia e qualidade
 
@@ -41,6 +42,8 @@ O SatoOne é um produto proprietário em desenvolvimento. A documentação públ
 - Use IDs: componentes `H###`, decisões `ADR-###`, problemas `BUG-###`, experimentos `EXP-###`.
 - Não declarar compatibilidade, autonomia, temperatura, desempenho ou compra como confirmados sem evidência documentada.
 - Registrar data da decisão separadamente da data de publicação. A direção técnica V1 atual foi definida em 2026-09-15 e consolidada publicamente em 2026-09-16.
+- Usar explicitamente `[PHYSICALLY VALIDATED]`, `[CURRENT DESIGN]`, `[PURCHASED]`, `[IN TRANSIT]`, `[PENDING VALIDATION]` e `[FUTURE/IDEA]`; compra não equivale a validação.
+- Quando uma decisão mudar, preservar a anterior como `SUPERSEDED` e apontar para o desenho vigente.
 
 ## Glossário resumido
 

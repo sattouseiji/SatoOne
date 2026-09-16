@@ -1,6 +1,6 @@
 # Engineering Decisions — SatoOne
 
-**Versão:** 1.2
+**Versão:** 1.3
 **Status:** Registro canônico de decisões  
 **Última atualização:** 2026-09-16
 
@@ -110,17 +110,22 @@ Registrar por que cada decisão relevante foi tomada, as alternativas avaliadas,
 ### ADR-012 — Nova cadeia de energia da V1
 
 - **Data:** 2026-09-15.
-- **Decisão:** planejar Li‑Po 1S de 10.000 mAh, PCM/BMS, fusível 7,5 A, USB-C com power-path, boost 5 V e comutação pelo `EN`.
-- **Motivo:** superar a autonomia medida de 1h04 e reduzir o volume do UPS/18650.
-- **Estado:** em validação; nenhuma peça candidata é considerada comprada.
+- **Atualização:** 2026-09-16.
+- **Decisão atual:** Li-Po 1S 10.000 mAh → IP5310 → switch mecânico existente → distribuição 5 V existente.
+- **Motivo:** reduzir o volume do LX-2BUPS/18650 e preservar o trecho pós-switch já funcional.
+- **Compra:** Li-Po e IP5310 [PURCHASED] [IN TRANSIT], entrega prevista até 2026-09-19.
+- **SUPERSEDED:** charger/boost separados, fusível obrigatório de 7,5 A, XT30, AWG18 e comutação por `EN` não integram a primeira montagem atual.
+- **Pendente:** confirmar PCM/BMS, A58/polaridade, pinout, 5 V/3,1 A e power-path no hardware recebido.
 - **Meta:** pelo menos duas horas no ensaio definido.
 
 ### ADR-013 — Telemetria no Debian
 
 - **Data:** 2026-09-15.
-- **Decisão:** avaliar fuel gauge 1S como MAX17048 e medição de potência com INA226 e shunt adequado à corrente.
+- **Atualização:** 2026-09-16.
+- **Decisão atual:** validar o INA219 R100 comprado e decidir sua instalação antes ou depois do boost.
 - **Motivo:** o UPS atual não fornece nível útil ao Linux.
-- **Consequência:** criar driver/serviço isolado da UI e validar I²C/kernel antes do fechamento do BOM.
+- **SUPERSEDED:** MAX17048 + INA226 deixam de ser a primeira integração, mas permanecem alternativas futuras se o INA219 for inadequado.
+- **Consequência:** criar driver/serviço isolado da UI, não inferir carga pela saída fixa de 5 V e implementar alerta/shutdown seguro após validar a medição.
 
 ### ADR-014 — Direção mecânica e térmica da V1
 

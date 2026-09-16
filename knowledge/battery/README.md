@@ -1,25 +1,30 @@
-# Bateria
+# Bateria e energia
 
-## Evidência V0
+## V0 [PHYSICALLY VALIDATED]
 
-- UPS para 2×18650: 89,78 × 42,10 × 30,22 mm, medição física de 2026-08-15.
-- Duas Samsung 18650 disponíveis no protótipo.
-- Autonomia física informada em 2026-09-15: **1h04**.
-- O UPS atual não expõe ao Debian telemetria confiável de carga.
+- LX-2BUPS/equivalente com duas 18650; envelope do conjunto UPS medido em 89,78 × 42,10 × 30,22 mm.
+- Barramento pós-switch alimenta Radxa, hub e tela em ramos separados.
+- Aproximadamente 4,8 V observados em operação normal e durante YouTube.
+- Em descarga profunda: ~2,9 V por célula sob carga, ~3,14 V após repouso e saída do sistema ~2,0 V após o desligamento.
+- O adaptador USB-C passivo não causou a queda; apenas repassou a tensão disponível.
+- 1h04 foi registrado anteriormente, mas fica **SUPERSEDED como autonomia definitiva**. O teste com carga completa iniciado em 2026-09-15 às ~18:40 permanece sem duração final validada.
 
-## Direção V1 — decisão de 2026-09-15
+## V1 [CURRENT DESIGN]
 
-Substituir UPS/18650 por Li‑Po pouch 1S de 10.000 mAh, protegida, com nova cadeia de carga e conversão. Meta: pelo menos duas horas em cenário documentado e case mais fina.
+`Li-Po 1S 10 Ah → IP5310 → switch existente → distribuição existente`.
 
-A bateria Rontek avaliada é apenas candidata: catálogo informa 3,7 V, 10.000 mAh e aproximadamente 12 × 59 × 110 mm. O anúncio também apresentou um campo de 36 V inconsistente; confirmar etiqueta física antes de comprar ou ligar.
+Comprados em 2026-09-16 e [IN TRANSIT] até previsão de 2026-09-19:
+
+- bateria Rontek/A58 família 1165110; anúncio: 3,7 V, 10.000 mAh/~37 Wh, 1C, 113,5 × 65 × 11,1 mm;
+- IP5310; anúncio: 1S, 5 V/~3,1 A, USB-C, carga/power-path e ~26 × 19 × 4,9 mm;
+- INA219 R100 com borne e I²C.
+
+Todos os dados de anúncio estão [PENDING VALIDATION]. Confirmar PCM/BMS, polaridade A58, pinout, capacidade, corrente, comportamento power-path e medidas físicas. A posição do INA219 antes/depois do boost ainda não foi decidida.
 
 ## Regras
 
-- Não assumir compra, capacidade, proteção ou corrente sem evidência.
-- Não ligar célula 1S diretamente ao barramento de 5 V.
-- Confirmar PCM/BMS, descarga ≥8 A, polaridade e terceiro fio.
-- Usar fusível 7,5 A, conexão adequada e AWG18.
-- Testar power-path e boost com carga eletrônica antes da Radxa.
-- Registrar autonomia, tensão, corrente, potência e temperatura em cada ensaio.
-
-Consultar `docs/electronics/V1_POWER_SYSTEM.md` e `specifications/electrical/README.md`.
+- Nunca ligar a Li-Po diretamente a cargas de 5 V.
+- Não cortar o A58 original se um rabicho compatível puder ser usado.
+- Fusível/PPTC é opcional na primeira montagem e deve ser reavaliado para a versão final.
+- Não estimar porcentagem apenas pelos 5 V regulados.
+- Implementar low-battery warning e shutdown limpo após validar a telemetria.

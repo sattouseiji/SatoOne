@@ -1,6 +1,6 @@
 # Engineering Timeline — SatoOne
 
-**Versão:** 1.2
+**Versão:** 1.3
 **Status:** Linha do tempo canônica  
 **Última atualização:** 2026-09-16
 
@@ -33,18 +33,21 @@ O material histórico importado não contém datas originais. Por integridade, e
 | 19 | 2026-08-04 | BMCU 370C AMS Lite comprado para testes de cor | Para Bambu Lab A1/A1 Mini; sensor Hall e bufferização bidirecional informados pelo anúncio; entrega pendente |
 | 20 | 2026-09-15 | Case V0 definitiva e protótipo operacional registrados | STLs preservados; fotos e vídeo reais; Radxa, display, touch e teclado em funcionamento |
 | 21 | 2026-09-15 | Health check integral executado | Recursos com folga; SoC 70,6 °C e pico de 77,5 °C; relatório consolidado |
-| 22 | 2026-09-15 | Autonomia V0 registrada | Duração física informada de 1h04; meta V1 definida em ≥2 h |
-| 23 | 2026-09-15 | Arquitetura de energia V1 definida | Li‑Po 1S 10.000 mAh, power-path, boost 5 V, proteção, fusível e telemetria I²C planejados |
+| 22 | 2026-09-15 | Ensaio V0 com carga completa iniciado | Início por volta de 18:40; duração final permanece pendente; 1h04 anterior não é valor definitivo |
+| 23 | 2026-09-15 | Direção de energia V1 definida | Substituir 2×18650/LX-2BUPS por Li-Po 1S e módulo compacto antes do switch |
 | 24 | 2026-09-15 | Direção mecânica/térmica V1 definida | Bateria atrás do teclado, case mais fina, cooling passivo e fan opcional |
 | 25 | 2026-09-16 | Estratégia comercial consolidada e publicada | Site corporativo, licença proprietária atual, Discussions, health check público, fotos e vídeo |
+| 26 | 2026-09-16 | Hardware de energia V1 comprado | Li-Po 10 Ah, IP5310 e INA219 em trânsito; entrega prevista até 2026-09-19 |
+| 27 | 2026-09-16 | Arquitetura atual de distribuição consolidada | IP5310 antes do switch; fiação pós-switch preservada; fusível/PPTC opcional |
 
 ## Próximos marcos planejados
 
-1. Confirmar especificações e adquirir componentes da cadeia de energia V1.
-2. Validar power-path, boost, proteção e sensores em bancada.
-3. Integrar telemetria I²C ao Debian e ao dashboard.
-4. Criar a fonte CAD da case V1 e testar coupons.
-5. Montar e executar os critérios de aceitação da V1.
+1. Receber, fotografar e medir Li-Po, IP5310 e INA219 até 2026-09-19.
+2. Confirmar proteção/polaridade da bateria e pinout/power-path do IP5310.
+3. Validar 5 V e escalar carga de Radxa para sistema completo.
+4. Decidir a posição do INA219 e integrar telemetria I²C ao Debian/dashboard.
+5. Implementar alerta/shutdown seguro e medir autonomia.
+6. Criar a fonte CAD da case V1 somente após as medições reais.
 
 ## Template de evento
 

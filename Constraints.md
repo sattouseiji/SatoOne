@@ -17,3 +17,9 @@ Estas regras orientam pessoas e agentes. Uma exceção exige decisão documentad
 - Nunca comprimir, perfurar, colar permanentemente ou montar a bateria sem folga, isolamento e alívio mecânico.
 - Nunca publicar no site informações de rede interna, credenciais, postura detalhada de segurança ou evidência operacional sensível.
 - Nunca tratar o repositório público como autorização de cópia, fabricação ou comercialização; respeitar a licença proprietária atual e o histórico de licenças anteriores.
+- Sempre consultar hardware, wiring e power antes de alterar alimentação; nunca assumir pinout, tensão, polaridade ou isolamento.
+- O sistema atual opera em 5 V; USB de dados e USB de potência devem ser tratados separadamente.
+- Nunca usar a Radxa ou o hub como distribuidor principal de potência; cargas principais recebem ramos próprios do barramento pós-switch.
+- Preservar a fiação pós-switch fisicamente validada; a próxima troca elétrica ocorre antes do switch, salvo decisão posterior documentada.
+- Medida física com paquímetro prevalece sobre anúncio, catálogo e estimativa.
+- Nunca desenhar encaixe final para componente em trânsito antes de medi-lo fisicamente.

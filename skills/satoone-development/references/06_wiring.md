@@ -1,20 +1,31 @@
-# Conexões V0 — baseline histórica
+# Conexões e distribuição
 
-| Origem | Destino | Interface |
-| --- | --- | --- |
-| USB-C externo | UPS | Entrada de carga |
-| 2× 18650 paralelas | UPS | Conector de bateria |
-| UPS 5 V | Radxa | USB-C de alimentação |
-| Radxa | Waveshare | HDMI para vídeo |
-| Touch Waveshare | Radxa ou hub | USB HID |
-| Radxa USB OTG | Hub USB interno | USB |
-| Hub | Controlador Q10 | USB |
-| UART Radxa | Porta externa | Debug |
+## V0 [PHYSICALLY VALIDATED]
 
-Confirmar orçamento de corrente, modelo, pinagem e níveis lógicos antes de energizar. Usar cabos curtos, identificados e com alívio de tensão; separar energia de dados/áudio quando possível. Não conectar periféricos de 5 V diretamente a GPIO sem adaptação adequada.
+```text
+2×18650 → LX-2BUPS/equivalente → switch no positivo → barramento 5 V
+                                                     ├─ Radxa
+                                                     ├─ Hub
+                                                     └─ Display (Power dedicado)
+```
 
-## Cadeia planejada para V1
+GND vai diretamente ao barramento negativo comum. Não alimentar todo o sistema por `UPS → Radxa → hub → demais cargas`; cada carga principal possui ramo próprio. Com o switch OFF, Radxa/tela/hub desligam, mas o UPS continua ligado às células e seu LED vermelho permanece aceso.
 
-`USB-C externo → carregador 1S com power-path → Li-Po protegida → fusível 7,5 A → monitor de corrente/shunt → boost 5 V → chave/EN → barramento SatoOne`.
+Os adaptadores USB-C macho → borne são passivos: recebem e repassam aproximadamente 5 V, sem regulação. A fiação pós-switch está funcional e não deve ser refeita sem necessidade.
 
-O fuel gauge lê a célula 1S via I²C; o monitor de corrente precisa suportar o caminho de corrente completo. Não ligar 3,6/3,7 V diretamente à Radxa: a entrada do sistema requer 5 V regulados. Validar polaridade, bitola, queda de tensão e dissipação antes de energizar.
+## Vídeo, touch e teclado [PHYSICALLY VALIDATED]
+
+- Vídeo: `Radxa micro-HDMI → adaptador HDMI/flat → cabo flat → HDMI flat Waveshare`.
+- Touch: `hub → USB-C Touch Waveshare`; dados USB separados do vídeo.
+- Teclado: `hub → BBQ20KBD`.
+- O VBUS do USB Touch conseguiu alimentar a tela; coexistência com o Power dedicado está [PENDING VALIDATION].
+
+Chicote Power observado da tela: dois fios vermelhos e um preto. A atribuição planejada é ambos vermelhos em +5 V e preto em GND, mas validar documentação/pinout antes da ligação final.
+
+## V1 [CURRENT DESIGN]
+
+```text
+Li-Po 1S 10 Ah → IP5310 → 5 V → switch existente → distribuição existente
+```
+
+Alterar apenas o bloco anterior ao switch. Fusível/PPTC é [OPTIONAL / FUTURE]. A58 com rabicho 22 AWG é a conexão preferida da bateria. A posição do INA219 — antes ou depois do boost — permanece [PENDING DESIGN DECISION]. Nunca ligar a Li-Po diretamente a componentes de 5 V.

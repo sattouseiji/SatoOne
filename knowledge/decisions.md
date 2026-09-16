@@ -42,13 +42,23 @@
 ## ADR-006 — Energia e telemetria da V1
 
 - **Data:** 2026-09-15.
-- **Decisão:** Li‑Po 1S 10.000 mAh, proteção/fusível, carregador power-path, boost 5 V, fuel gauge e monitor de potência I²C.
-- **Motivo:** autonomia V0 de 1h04, volume do UPS e ausência de telemetria no Debian.
-- **Estado:** em validação; candidatos não comprados.
+- **Atualização:** 2026-09-16.
+- **Decisão atual:** Li-Po 1S 10.000 mAh + IP5310 antes do switch atual; preservar a distribuição pós-switch; validar INA219 antes/depois do boost.
+- **Compra:** Li-Po, IP5310 e INA219 [PURCHASED] [IN TRANSIT], entrega prevista até 2026-09-19.
+- **SUPERSEDED:** cadeia genérica charger/boost separados, fusível 7,5 A obrigatório, XT30, AWG18, MAX17048 e INA226 não integram a primeira montagem atual.
+- **Motivo:** volume do UPS/18650, colapso de tensão em bateria baixa e ausência de telemetria no Debian.
+- **Estado:** integração pendente; fusível/PPTC opcional nesta etapa.
 
 ## ADR-007 — Case e cooling da V1 comercial
 
 - **Data:** 2026-09-15.
 - **Decisão:** bateria atrás do teclado, redução da espessura, dissipação passiva e fan somente se necessário.
-- **Metas:** 25–28 mm na região da bateria; SoC sustentado ≤75 °C sem throttling; autonomia ≥2 h.
+- **Metas:** reduzir o Back após medir o hardware recebido; SoC sustentado ≤75 °C sem throttling; autonomia ≥2 h.
 - **Estado:** metas ainda não validadas fisicamente.
+
+## ADR-008 — Preservar distribuição pós-switch
+
+- **Data:** 2026-09-16.
+- **Decisão:** manter switch, GND comum e ramos de +5 V para Radxa, hub e tela; trocar somente bateria/UPS antes do switch.
+- **Evidência:** fiação funciona a aproximadamente 4,8 V com sistema completo e YouTube.
+- **Limite:** validar Power dedicado + VBUS Touch contra backfeed.

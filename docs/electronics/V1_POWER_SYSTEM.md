@@ -1,57 +1,64 @@
 # Sistema de energia e telemetria — V1
 
-**Decisão técnica:** 2026-09-15
-**Estado:** arquitetura planejada; nenhum componente novo deve ser tratado como comprado
+**Direção técnica:** 2026-09-15
+**Compra registrada:** 2026-09-16
+**Estado:** componentes principais [PURCHASED] [IN TRANSIT], entrega prevista até 2026-09-19
 
-## Arquitetura
+## Arquitetura atual [CURRENT DESIGN]
 
 ```text
-Li-Po 1S 10.000 mAh
-  → PCM/BMS e fusível 7,5 A
-  → carregador USB-C 1S com power-path
-  → boost síncrono 5,0 V
-  → botão pelo pino EN
-  → barramento 5 V: Radxa, display e periféricos
+Li-Po Rontek/A58 1S 10 Ah
+  → módulo IP5310
+  → saída 5 V
+  → switch mecânico existente no positivo
+  → distribuição pós-switch existente
+      ├─ Radxa
+      ├─ Hub
+      └─ Display
 ```
 
-A bateria varia aproximadamente entre 3,0 e 4,2 V e nunca pode alimentar diretamente o barramento de 5 V.
+A fiação após o switch está pronta e fisicamente validada. A próxima alteração deve ocorrer somente antes do switch. GND permanece comum. Radxa e hub não devem ser usados como distribuidores principais de potência.
 
-## Requisitos dos componentes
+## Hardware comprado [PENDING VALIDATION]
 
-- Li‑Po protegida, 3,6/3,7 V nominal, 10.000 mAh, descarga contínua mínima de 8 A e ideal de 10 A.
-- Carregador USB-C para 1S, corrente de carga entre 2 e 3 A, power-path verdadeiro e caminho do sistema dimensionado para a carga real.
-- Boost com entrada 3,0–4,2 V, saída regulada em 5,0 V, pelo menos 3 A contínuos e 5 A recomendados, com `EN`.
-- Fusível 7,5 A próximo da bateria, XT30 e fio silicone AWG18 no caminho principal.
-- Fuel gauge 1S via I²C, com MAX17048 ou equivalente como candidato.
-- INA226 com shunt externo dimensionado para pelo menos 8 A, ou solução equivalente. INA219 comum somente após comprovar trilha, shunt e dissipação.
+| Item | Dados de anúncio/compra | Verificar no recebimento |
+| --- | --- | --- |
+| Li-Po | Rontek/A58, família 1165110, 1S, ~3,7 V, 10.000 mAh/~37 Wh, 1C, 113,5 × 65 × 11,1 mm | medidas, rótulo, tensão, A58/polaridade, PCM/BMS, capacidade/corrente |
+| IP5310 | 1S, boost 5 V/~3,1 A, USB-C, carga integrada/power-path, ~26 × 19 × 4,9 mm | pinout, saída sem/sob carga, temperatura, proteções e uso durante carga |
+| INA219 | shunt R100, borne, VCC/GND/SDA/SCL | limite de corrente, dissipação, queda, resolução e posição elétrica |
 
-## Bateria candidata
+Compra não comprova especificação, compatibilidade ou segurança. Não criar encaixes finais antes de medir as peças reais.
 
-A Rontek de 10.000 mAh avaliada em 2026-09-15 tem envelope de catálogo aproximado de 12 × 59 × 110 mm e conector A58. Antes da compra, confirmar na peça/etiqueta:
+## Telemetria
 
-1. 3,6 ou 3,7 V nominal — nunca 36 V;
-2. PCM/BMS integrado;
-3. corrente de descarga contínua;
-4. corte do PCM;
-5. polaridade e função de eventual terceiro fio;
-6. capacidade garantida e ficha técnica.
+A posição do INA219 permanece [PENDING DESIGN DECISION]:
 
-## Telemetria Debian
+- antes do boost: melhor visibilidade da bateria;
+- depois do boost: consumo agregado do sistema em 5 V.
 
-O software deverá ler via I²C e expor ao dashboard:
+A saída regulada de 5 V não serve sozinha como porcentagem da bateria. O software deverá mostrar carga estimada, tensão, corrente, potência e runtime; emitir low-battery warning e executar shutdown limpo antes do colapso.
 
-- tensão e estado de carga;
-- corrente e potência instantâneas;
-- carregando/descarregando;
-- autonomia estimada;
-- alerta de bateria baixa;
-- logs de consumo e temperatura para engenharia.
+## Proteção e conexão
 
-Confirmar suporte no kernel real da Radxa e no device tree antes de fechar a escolha do sensor.
+- PCM/BMS do pack: [VERIFY EXACT PACK PROTECTION].
+- Conector: A58 fêmea com rabicho, preferencialmente 22 AWG, [TO BUY / VERIFY].
+- Fusível/PPTC: [OPTIONAL / FUTURE] para a primeira montagem; reavaliar na versão final.
+- Não cortar o A58 original se houver conector compatível.
+- Nunca ligar a Li-Po diretamente a componentes de 5 V.
 
-## Referências técnicas
+## Arquitetura superseded
 
-- [MAX17048/MAX17049 — Analog Devices](https://www.analog.com/en/products/max17048.html)
-- [Driver INA2xx no kernel Linux](https://www.kernel.org/doc/html/latest/hwmon/ina2xx.html)
+A recomendação anterior de charger e boost separados, boost 5 A, fusível obrigatório de 7,5 A, XT30, AWG18, MAX17048 e INA226 está **SUPERSEDED para a primeira integração V1**. Esses itens podem voltar como alternativas se os testes do IP5310/INA219 falharem.
 
-Links são referências para avaliação; não comprovam integração, compra ou compatibilidade elétrica do conjunto final.
+## Teste ordenado
+
+1. Fotografar e medir os três módulos.
+2. Inspecionar bateria e identificar pinout do IP5310.
+3. Testar Li-Po → IP5310 sem carga e confirmar aproximadamente 5 V.
+4. Testar Radxa; Radxa + hub; sistema completo.
+5. Medir tensão/temperatura com Wi-Fi, YouTube, tela, touch e teclado.
+6. Testar carga USB-C durante o uso.
+7. Decidir e integrar INA219.
+8. Implementar leitura Debian, alertas e shutdown.
+9. Medir autonomia.
+10. Somente então redesenhar o Back.

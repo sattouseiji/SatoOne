@@ -12,7 +12,9 @@ O CAD paramétrico/editável correspondente não estava presente na pasta da ent
 
 ## Direção comercial V1 — decisão de 2026-09-15
 
-Remover o volume do UPS/18650, posicionar a pouch atrás do teclado e buscar 25–28 mm na região da bateria, ainda como estimativa sujeita a stack-up físico. Projetar refrigeração passiva e reservar fan de 30 mm sem instalá-lo por padrão. Criar CAD novo, manter a V0 intacta e validar com coupons antes da impressão completa.
+Remover o volume do UPS/18650 e posicionar a pouch atrás do teclado. A meta anterior de 25–28 mm fica **SUPERSEDED como dimensão de projeto** até a Li-Po, IP5310 e INA219 em trânsito serem medidos. Projetar refrigeração passiva e reservar fan de 30 mm sem instalá-lo por padrão. Criar CAD novo, manter a V0 intacta e validar com coupons antes da impressão completa.
+
+Na V0 funcional, Radxa e hub trocaram de posição, a ventilação acompanhou a Radxa e a profundidade nominal do Back foi reduzida de 40 para 34 mm. Radxa usa pitch de projeto 58 × 23 mm e postes de 10 mm; hub usa pitch atual validado 52 × 15,25 mm e deve ficar próximo à parede.
 
 ## Atualização 2026-08-15
 

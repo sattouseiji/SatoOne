@@ -5,3 +5,5 @@ Validar mudanças proporcionalmente ao risco. Para software: lint/format, testes
 Para hardware: testar módulos fora da carcaça, confirmar tensão/corrente/pinagem antes de energizar, testar termicamente sob carga e validar carga, autonomia, touch, teclado, Wi-Fi, Bluetooth, portas e desmontagem. Registrar limitações e resultados.
 
 Aceitação V1: pelo menos duas horas no cenário documentado, 5 V estáveis sem reset, telemetria coerente no Debian, SoC sustentado preferencialmente até 75 °C sem throttling e inspeção da pouch sem compressão ou aquecimento anormal. Não converter meta em resultado antes do ensaio.
+
+Para o hardware em trânsito, seguir obrigatoriamente `07_assembly.md` e `27_power.md`: inspeção/medição, teste sem carga, escalada de cargas, uso e carga simultâneos, INA219 e somente então CAD.

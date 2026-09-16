@@ -26,4 +26,4 @@ Produto proprietário com desenvolvimento público sanitizado. Motivo: apresenta
 
 ## Energia, telemetria e case V1 — 2026-09-15
 
-Substituir na V1 o UPS/18650 por cadeia 1S dedicada e mensurável; colocar a pouch atrás do teclado e reduzir a espessura. Motivo: autonomia V0 de 1h04, volume do conjunto atual e ausência de telemetria no Debian. Cooling ativo permanece opcional e condicionado a ensaios.
+Substituir na V1 o UPS/18650 por Li-Po 1S + IP5310 antes do switch existente; preservar a distribuição pós-switch. Li-Po, IP5310 e INA219 foram comprados em 2026-09-16 e permanecem em trânsito. A posição do INA219 depende de decisão entre medir célula ou barramento de 5 V. Fusível/PPTC é opcional nesta montagem, e a recomendação anterior de fusível 7,5 A + XT30 + AWG18 fica **SUPERSEDED** para o desenho atual. Cooling ativo permanece condicionado a ensaios.

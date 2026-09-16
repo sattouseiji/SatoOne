@@ -1,24 +1,25 @@
-# Hardware — V0 validada e direção V1
+# Hardware — estado em 2026-09-16
 
-## Atualização 2026-08-15
+## V0 funcional [PHYSICALLY VALIDATED]
 
-Display confirmado: Waveshare 5DP-CAPLCD-H; envelope físico medido 122.76 × 77.28 × 17.38 mm. GPIO da Radxa permanece instalado. Consultar o BOM para evidências e pendências.
-
-| Item | Especificação |
+| Item | Estado atual |
 | --- | --- |
-| Placa | Radxa Zero 3W |
-| SoC | Rockchip RK3566, quad-core Cortex-A55 |
-| GPU | Mali-G52 |
-| RAM | 4 GB LPDDR4 |
-| Armazenamento | 32 GB eMMC |
-| Wireless | Wi-Fi 5 e Bluetooth 5.x |
-| Sistema | Debian Bullseye XFCE |
-| Alimentação | 5 V USB-C |
+| Radxa | Zero 3W, 4 GB RAM, 32 GB eMMC, GPIO instalado, Debian, Wi-Fi e YouTube funcionais |
+| Display | Waveshare 5DP-CAPLCD/5DP-CAPLCD-H, 5", 1024×600, 122,76 × 77,28 mm, espessura máxima aproximada 17,38 mm |
+| Teclado | BlackBerry Q10/BBQ20KBD; PCB 77,89 × 53,39 mm; área visível 68,32 × 42,43 mm; espessura aproximada 7,11 mm |
+| Hub | USB 2.0 1→4; PCB aproximada 57 × 30 × 13,90 mm; mounting pitch atual 52,00 × 15,25 mm |
+| Energia | LX-2BUPS/equivalente, 2×18650, barramento pós-switch com ramos separados para Radxa, hub e display |
 
-Display atual: Waveshare 5DP-CAPLCD-H, 1024×600, HDMI, touch capacitivo USB HID. Display futuro candidato: IPS HDMI 4", 720×720, capacitivo e compatível com Linux.
+O mounting pitch anterior do hub, 43,35 × 10,61 mm, fica **SUPERSEDED** pelo padrão atual fisicamente validado de 52,00 × 15,25 mm. Os quatro postes devem formar retângulo simétrico; standoff OD 5,0 mm, altura 4,0 mm e piloto aproximado 2,20 mm.
 
-Na V0, o teclado BlackBerry Q10/BBQ20KBD é QWERTY físico por USB. A alimentação usa UPS e duas 18650, apresenta autonomia observada de 1h04 e não fornece telemetria útil ao Debian.
+## Vídeo e USB [PHYSICALLY VALIDATED]
 
-Direção definida em 2026-09-15 para a V1: Li-Po pouch protegida 1S de 10.000 mAh, carregador USB-C 1S com power-path, boost de 3,0–4,2 V para 5,0 V/5 A recomendado, fusível 7,5 A, XT30, AWG18, fuel gauge e monitor INA226/equivalente dimensionado para a corrente real. A Rontek A58 é apenas candidata; conferir rótulo, dimensões, polaridade e corrente antes da compra. Ventoinha de 30 mm somente se ensaio sustentado exigir.
+Vídeo: `Radxa micro-HDMI → adaptador HDMI/flat → cabo flat HDMI → entrada HDMI flat Waveshare`. O FPC da Radxa não é HDMI/display e não integra a tela atual. Meta de vídeo: 1024×600 a 60 Hz; áudio pode trafegar por HDMI.
 
-Manter USB-C, micro-HDMI, microSD, áudio, UART, USB OTG, GPIO, I2C, SPI e PWM disponíveis conforme a integração. Sensores: bateria, corrente, temperatura e touch; IMU, GPS e NFC futuros. Confirmar sempre Linux, pinagem, nível lógico, tensão e corrente antes da integração; preferir HDMI e USB HID e evitar drivers proprietários.
+USB: `Radxa USB → hub → touch Waveshare + teclado`. Touch e teclado funcionam. O USB-C Touch da tela também transportou 5 V/VBUS e conseguiu alimentá-la. A coexistência do Power dedicado com o VBUS do Touch ainda exige validação contra backfeed; não cortar VBUS nem assumir isolamento antes dessa verificação.
+
+## V1 [CURRENT DESIGN]
+
+Li-Po 1S 10.000 mAh → IP5310 → switch geral → distribuição 5 V já existente. Li-Po, IP5310 e INA219 estão [PURCHASED] [IN TRANSIT], com entrega prevista até 2026-09-19. Não desenhar fixação final nem assumir pinout, medidas, PCM/BMS ou desempenho antes do recebimento e inspeção.
+
+Manter USB-C, micro-HDMI, microSD, áudio, UART, USB OTG, GPIO, I²C, SPI e PWM acessíveis conforme a integração. Consultar `27_power.md` antes de qualquer alteração elétrica.

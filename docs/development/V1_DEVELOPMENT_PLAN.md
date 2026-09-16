@@ -2,11 +2,11 @@
 
 **Direção definida:** 2026-09-15
 **Publicação consolidada:** 2026-09-16
-**Estado:** planejamento e seleção de componentes
+**Estado:** hardware de energia comprado/em trânsito; integração pendente
 
 ## Baseline V0
 
-A V0 executa Debian na Radxa Zero 3W com display touch de 5", teclado físico e alimentação portátil. Fotos e vídeo comprovam a integração. A autonomia física informada é de **1h04**. O health check observou SoC em **70,6 °C**, com pico de **77,5 °C**.
+A V0 executa Debian na Radxa Zero 3W com display touch de 5", teclado físico e alimentação portátil. Fotos e vídeo comprovam a integração. O registro anterior de 1h04 foi marcado como não definitivo; o ensaio iniciado com carga completa em 2026-09-15 ainda está [PENDING VALIDATION]. O health check observou SoC em **70,6 °C**, com pico de **77,5 °C**.
 
 ## Objetivos da V1
 
@@ -21,8 +21,8 @@ A V0 executa Debian na Radxa Zero 3W com display touch de 5", teclado físico e 
 
 | Frente | Entrega | Estado |
 | --- | --- | --- |
-| Energia | bateria, proteção, power-path, boost e barramento 5 V | Planejada |
-| Telemetria | fuel gauge e medição de corrente/potência via I²C | Planejada |
+| Energia | Li-Po 10 Ah + IP5310 antes do switch existente | Comprada/em trânsito; validar |
+| Telemetria | INA219 antes/depois do boost via I²C | Comprada/em trânsito; decisão pendente |
 | Mecânica | nova case mais fina e componentes removíveis | Planejada |
 | Térmica | caminho passivo e reserva para fan de 30 mm | Planejada |
 | Software | driver/serviço de bateria e integração no dashboard | Planejada |
@@ -30,10 +30,11 @@ A V0 executa Debian na Radxa Zero 3W com display touch de 5", teclado físico e 
 
 ## Sequência
 
-1. Confirmar especificações físicas e elétricas da bateria.
-2. Comprar somente componentes com corrente, tensão e documentação compatíveis.
-3. Testar a cadeia de energia com carga eletrônica antes da Radxa.
-4. Validar sensores I²C e drivers no kernel do dispositivo.
-5. Criar CAD V1 sem sobrescrever a V0.
-6. Imprimir coupons e validar folgas, fixação e térmica.
-7. Montar V1 e executar o plano de aceitação.
+1. Receber, fotografar e medir Li-Po, IP5310 e INA219 até 2026-09-19.
+2. Confirmar PCM/BMS, A58/polaridade e pinout do IP5310.
+3. Testar 5 V sem carga, depois Radxa, Radxa + hub e sistema completo.
+4. Validar carga/uso simultâneos e temperatura sob YouTube.
+5. Decidir posição e limite do INA219; integrar leitura Linux.
+6. Implementar indicador, low-battery warning e shutdown automático.
+7. Medir autonomia com a Li-Po 10 Ah.
+8. Criar CAD V1 após medições reais, sem sobrescrever a V0.

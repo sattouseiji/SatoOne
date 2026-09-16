@@ -16,6 +16,8 @@ Os nomes antigos permanecem registrados aqui para rastreabilidade; o conteúdo g
 
 A montagem V0 foi concluída e funciona com Radxa Zero 3W, display Waveshare 5DP-CAPLCD-H, touchscreen USB, BBQ20KBD, hub USB e UPS.
 
+Na revisão funcional mais recente, Radxa e hub trocaram de posição, o hub ficou próximo à parede, a ventilação acompanhou a Radxa e a profundidade nominal do Back foi reduzida de 40 para 34 mm. O pitch de projeto da Radxa é 58 × 23 mm com postes de 10 mm; o pitch atual validado do hub é 52 × 15,25 mm. Essas notas não alteram os STLs preservados.
+
 ## Impressão
 
 As configurações exatas de material, orientação, suporte e perfil do slicer usadas na validação física ainda precisam ser registradas. Não inventar parâmetros ausentes.
@@ -23,4 +25,3 @@ As configurações exatas de material, orientação, suporte e perfil do slicer 
 ## Fonte editável
 
 Esta entrega contém as malhas STL definitivas. O arquivo CAD paramétrico/editável correspondente não estava presente nesta pasta na preparação inicial do repositório. Adicioná-lo futuramente sem substituir silenciosamente estes STLs.
-

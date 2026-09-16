@@ -12,7 +12,7 @@ Usar `../satone-connect/SKILL.md` para conexão, identidade e elevação. Nunca 
 - **Interno:** padrão para diagnóstico. Preservar evidências técnicas suficientes, restringir o arquivo ao ambiente de engenharia e ainda remover credenciais e chaves.
 - **Público comercial:** usar ao publicar no GitHub Pages. Consolidar resultados para compradores, parceiros e financiadores e remover IP, SSID, MAC, portas, usuários, postura SSH/firewall, logs brutos e outros detalhes exploráveis.
 
-Nos dois modos, separar `V0 observada`, `V1 planejada` e `meta`. A V0 tem autonomia informada de 1h04; a V1 prevê 10.000 mAh, telemetria Debian, case menor e cooling condicionado a testes. Não apresentar isso como implementado.
+Nos dois modos, separar `V0 observada`, `V1 comprada/em trânsito`, `V1 validada` e `meta`. O 1h04 anterior não é autonomia definitiva; Li-Po 10 Ah, IP5310 e INA219 foram comprados em 2026-09-16, mas ainda não foram recebidos/validados. Não apresentar compra como implementação.
 
 ## Fluxo
 
@@ -52,7 +52,7 @@ Para dados protegidos, abrir sessão como `satoone` e usar `sudo -i` ou `sudo su
 - Redigir MACs, chaves, tokens, senhas e dados pessoais desnecessários.
 - Nunca publicar inventário detalhado de rede, portas, SSH, firewall ou logs; substituir por estados consolidados e recomendações seguras.
 - Não afirmar saúde de bateria quando o UPS não expõe telemetria ao Linux.
-- Não afirmar que a bateria V1, os módulos de telemetria, a nova case ou o fan foram comprados/instalados antes de evidência.
+- Não afirmar que peças compradas/em trânsito foram recebidas, instaladas ou validadas; nova case e fan continuam não implementados.
 - Não interpretar ausência de log como ausência de erro sem confirmar permissões.
 - Destacar temperatura sustentada alta, filesystem acima de 85%, swap sob pressão, perda de pacotes, serviços falhos e reinicializações inesperadas.
 - Recomendar correções; só aplicá-las quando o usuário pedir explicitamente.

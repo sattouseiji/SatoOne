@@ -6,7 +6,7 @@
 | --- | --- |
 | Produto | SatoOne |
 | Versão | 1.1 (V0 funcional → V1 comercial) |
-| Estado | V0 validada; V1 em planejamento técnico |
+| Estado | V0 funcional; hardware de energia V1 comprado/em trânsito e integração pendente |
 
 ## Objetivo
 
@@ -32,6 +32,7 @@ Hardware, software, interface, documentação e fabricação com acabamento prem
 6. Oferecer pelo menos duas horas de autonomia na V1 em cenário de teste documentado.
 7. Expor ao Debian carga, tensão, corrente, potência e autonomia estimada da bateria.
 8. Reduzir a espessura da case V0 sem comprometer bateria, manutenção ou térmica.
+9. Preservar a distribuição 5 V pós-switch já validada e integrar a nova fonte sem usar Radxa/hub como caminho de potência.
 
 ## Critérios de sucesso
 

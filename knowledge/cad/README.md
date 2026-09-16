@@ -2,7 +2,9 @@
 
 ## Direção atual — V1 comercial, 2026-09-15
 
-A próxima case deve remover o volume do UPS/18650, posicionar a Li‑Po pouch atrás do teclado e buscar 25–28 mm na região da bateria. A dissipação será passiva primeiro, com reserva para fan de 30 mm apenas se testes sustentados exigirem. Ainda não existe CAD V1 comercial validado.
+A próxima case deve remover o volume do UPS/18650 e posicionar a Li‑Po pouch atrás do teclado. A meta anterior de 25–28 mm fica **SUPERSEDED** até medir Li-Po, IP5310 e INA219 após o recebimento. A dissipação será passiva primeiro, com reserva para fan de 30 mm apenas se testes sustentados exigirem. Ainda não existe CAD V1 comercial validado.
+
+Na V0 funcional, Radxa e hub foram invertidos, o hub foi aproximado da parede, a ventilação acompanhou a Radxa e o Back nominal caiu de 40 para 34 mm. Preservar as versões anteriores e não confundir essa profundidade nominal com o envelope externo de aproximadamente 44 mm registrado separadamente.
 
 A V0 definitiva preservada em `SatoOne_Case_V0/` é a baseline física. Como a fonte paramétrica correspondente não está presente no repositório atual, uma nova fonte deve ser criada para a V1 sem sobrescrever os STLs V0.
 

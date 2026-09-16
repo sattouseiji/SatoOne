@@ -12,8 +12,8 @@ Construa o SatoOne como um produto proprietário, portátil, comercial e offline
 - Placa: Radxa Zero 3W, Debian Bullseye com XFCE e Python 3.9+.
 - Recursos disponíveis: 4 GB de RAM e 32 GB de armazenamento interno. Trate RAM, espaço em disco, CPU e temperatura como recursos limitados.
 - Tela atual: Waveshare HDMI de 5", 1024x600, touch capacitivo. Planeje componentes responsivos para a futura tela HDMI IPS de 4", 720x720.
-- V0 comprovada: teclado BlackBerry Q10/BBQ20KBD, UPS com duas 18650 e case impressa; autonomia observada de 1h04.
-- V1 planejada em 2026-09-15: Li-Po pouch 1S de 10.000 mAh atrás do teclado, carga USB-C com power-path, boost 5 V, telemetria no Debian e case menor e mais fina. Trate tudo como planejado/candidato até compra e validação.
+- V0 comprovada: Radxa, display/touch, teclado, hub, UPS com duas 18650, distribuição 5 V e case impressa funcionais. O ensaio definitivo de autonomia permanece pendente.
+- V1 atual: Li-Po pouch 1S de 10.000 mAh, IP5310 e INA219 foram comprados em 2026-09-16 e estão em trânsito; compra não equivale a validação física ou elétrica.
 
 ## Arquitetura
 
@@ -107,6 +107,7 @@ Comece sempre por [00_project.md](references/00_project.md). Carregue os demais 
 - [24_debug_history.md](references/24_debug_history.md): depuração cronológica.
 - [25_glossary.md](references/25_glossary.md): termos do projeto.
 - [26_commercial_product.md](references/26_commercial_product.md): posicionamento comercial e política de publicação.
+- [27_power.md](references/27_power.md): arquitetura elétrica, medições, compras e plano de testes.
 
 Após trabalho relevante, atualize a especificação afetada, `knowledge/` e `CHANGELOG.md`. Para decisões, registre motivo, alternativas, decisão, evidência e melhoria futura.
 
@@ -117,7 +118,13 @@ Após trabalho relevante, atualize a especificação afetada, `knowledge/` e `CH
 - Consultar `knowledge/fixes/` e `references/13_solutions.md` antes de propor solução.
 - Consultar `Engineering_Decisions.md`, `knowledge/decisions.md` e `references/09_decisions.md` antes de alterar arquitetura.
 - Preservar medições físicas e rotulá-las como `MEDIÇÃO FÍSICA`; diferenciar de `ESPECIFICAÇÃO DO FABRICANTE`, `ESTIMATIVA` e `PENDENTE DE VALIDAÇÃO`.
+- Consultar `references/01_hardware.md`, `references/06_wiring.md` e `references/27_power.md` antes de qualquer alteração elétrica.
+- Nunca assumir pinout, polaridade, tensão, corrente ou isolamento; o sistema atual usa barramento de 5 V e USB DATA não equivale a USB POWER.
 - Atualizar documentação após descobertas relevantes; não repetir experimentos marcados como `FAILED`.
 - Não alterar hardware confirmado sem justificativa e evidência.
+- Para alteração física, registrar motivo, medida anterior, medida nova e estado de validação; medida de paquímetro prevalece sobre anúncio/estimativa.
 - Distinguir explicitamente `PROTOTYPE` de `PRODUCTION`.
 - Para impressão 3D, priorizar calibration coupons/fit tests pequenos antes de uma impressão grande.
+- Preservar a fiação funcional pós-switch; na próxima troca elétrica, alterar somente o bloco bateria/conversor anterior ao switch, salvo nova evidência.
+- Não usar Radxa/hub como distribuidor principal de potência, não redesenhar parte validada sem motivo e não criar encaixe final de peça ainda não recebida.
+- Em tarefas Git, não fazer push sem pedido explícito; um pedido de commit local não autoriza publicação.
