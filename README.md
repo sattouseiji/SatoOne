@@ -2,6 +2,8 @@
 
 SatoOne é um computador portátil e open-source baseado na Radxa Zero 3W, com Linux Debian, tela touch Waveshare de 5", teclado físico BlackBerry/BBQ20KBD e alimentação por bateria/UPS.
 
+[**Site oficial**](https://sattouseiji.github.io/SatoOne/) · [**Health check completo**](https://sattouseiji.github.io/SatoOne/reports/satoone-health-2026-09-15.html) · [Documentação](docs/README.md)
+
 ## Estado do projeto
 
 A V0 física está montada e funcional. Foram validados no equipamento:
@@ -39,6 +41,10 @@ O hardware funciona, mas ainda há melhorias planejadas para refrigeração, tel
 
 Consulte [a especificação de hardware](specifications/hardware/README.md) e [a documentação da case V0](SatoOne_Case_V0/README.md) antes de alterar o projeto.
 
+## Health check
+
+O diagnóstico mais recente está disponível como uma [página interativa](https://sattouseiji.github.io/SatoOne/reports/satoone-health-2026-09-15.html), com visão geral, temperatura, utilização de recursos, periféricos, rede, segurança, evidências e ações recomendadas. O processo de coleta pode ser reproduzido pela [skill de health check](skills/satoone-health-check/SKILL.md).
+
 ## Segurança
 
 Nenhuma senha, token ou chave privada deve ser versionada. O acesso SSH ao dispositivo usa uma chave privada mantida fora deste repositório.
@@ -48,4 +54,3 @@ Nenhuma senha, token ou chave privada deve ser versionada. O acesso SSH ao dispo
 Copyright © 2026 Marcelo Sato.
 
 Este projeto é disponibilizado sob a [Licença MIT](LICENSE).
-
