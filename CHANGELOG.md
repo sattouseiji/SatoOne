@@ -4,6 +4,12 @@ O projeto segue versionamento incremental. Registre decisões, marcos e mudança
 
 ## [Unreleased]
 
+### GitHub workflow — 2026-09-15
+
+- Adicionado o skill satoone-github-release com o fluxo seguro de preflight, commit, autenticação SSH, push e validação no GitHub.
+- Documentados caminhos das ferramentas, repositório remoto, branch principal e chave SSH dedicada sem armazenar credenciais.
+- Adicionado script PowerShell de preflight somente de leitura para detectar alterações, arquivos grandes e possível material sensível.
+
 ### V0 definitiva — 2026-09-15
 
 - Confirmada a case V0 fisicamente funcional como versão definitiva do protótipo.

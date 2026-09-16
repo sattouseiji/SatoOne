@@ -1,0 +1,4 @@
+interface:
+  display_name: "SatoOne GitHub Release"
+  short_description: "Publicacao segura e repetivel do SatoOne no GitHub"
+  default_prompt: "Use $satoone-github-release para revisar, versionar e publicar as alteracoes do SatoOne no GitHub."
