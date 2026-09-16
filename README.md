@@ -4,7 +4,7 @@
 
 SatoOne combina Linux, tela touch e teclado físico em um equipamento compacto, concebido para produtividade móvel, automações e acesso a um ambiente computacional completo.
 
-[**Conheça o SatoOne**](https://sattouseiji.github.io/SatoOne/) · [**Acompanhe o desenvolvimento**](https://github.com/sattouseiji/SatoOne/discussions)
+[**Conheça o SatoOne**](https://sattouseiji.github.io/SatoOne/) · [**Health check e plano V1**](https://sattouseiji.github.io/SatoOne/reports/satoone-health-2026-09-15.html) · [**Acompanhe o desenvolvimento**](https://github.com/sattouseiji/SatoOne/discussions)
 
 ## Estado atual
 
@@ -17,7 +17,7 @@ A versão V0 é um protótipo físico funcional. Já foram integrados e validado
 - funcionamento portátil por bateria;
 - gabinete próprio produzido por impressão 3D.
 
-O desenvolvimento atual prioriza autonomia, gerenciamento térmico, redução de volume, acabamento e preparação para uma futura série piloto.
+O desenvolvimento atual prioriza autonomia, telemetria de bateria no Debian, gerenciamento térmico, redução de volume, acabamento e preparação para uma futura série piloto. A V1 está sendo planejada com bateria Li‑Po 1S de 10.000 mAh, eletrônica de alimentação redesenhada e uma case menor e mais fina. A autonomia mínima pretendida é de duas horas, ainda sujeita à validação no protótipo físico.
 
 ## Visão do produto
 

@@ -4,6 +4,16 @@ O projeto segue versionamento incremental. Registre decisões, marcos e mudança
 
 ## [Unreleased]
 
+### Posicionamento comercial e plano público V1 — 2026-09-16
+
+- Reposicionado o SatoOne como produto proprietário em desenvolvimento, com página corporativa, canal de interesse e licença de direitos reservados para as novas versões.
+- Reformulado o health check público para apresentar resultados consolidados da V0 sem divulgar rede ou parâmetros internos de segurança.
+- Registrada a autonomia física atual de 1h04 e a meta mínima de duas horas para a V1.
+- Planejada arquitetura com Li‑Po 1S de 10.000 mAh, carregador USB-C com power-path, boost regulado em 5 V, proteção, fusível e fiação de alta corrente.
+- Planejada telemetria de bateria no Debian por fuel gauge e monitor de corrente/potência via I²C.
+- Definidas como prioridades da case V1 a redução de espessura, bateria atrás do teclado, dissipação passiva e ventoinha opcional condicionada aos testes térmicos.
+- Adicionado painel fotográfico com vistas reais do protótipo V0.
+
 ### GitHub workflow — 2026-09-15
 
 - Adicionado o skill satoone-github-release com o fluxo seguro de preflight, commit, autenticação SSH, push e validação no GitHub.
