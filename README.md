@@ -4,7 +4,7 @@
 
 SatoOne combina Linux, tela touch e teclado físico em um equipamento compacto, concebido para produtividade móvel, automações e acesso a um ambiente computacional completo.
 
-[**Conheça o SatoOne**](https://sattouseiji.github.io/SatoOne/) · [**Health check e plano V1**](https://sattouseiji.github.io/SatoOne/reports/satoone-health-2026-09-15.html) · [**Acompanhe o desenvolvimento**](https://github.com/sattouseiji/SatoOne/discussions)
+[**Conheça o SatoOne**](https://sattouseiji.github.io/SatoOne/) · [**Atualização e health check — 25/09**](https://sattouseiji.github.io/SatoOne/reports/satoone-health-2026-09-25.html) · [**Acompanhe o desenvolvimento**](https://github.com/sattouseiji/SatoOne/discussions)
 
 ## Estado atual
 
@@ -19,9 +19,11 @@ A versão V0 é um protótipo físico funcional. Já foram integrados e validado
 
 A [página oficial](https://sattouseiji.github.io/SatoOne/) apresenta fotos e uma demonstração em vídeo do protótipo real em funcionamento.
 
-O desenvolvimento atual prioriza autonomia, telemetria de bateria no Debian, gerenciamento térmico, redução de volume, acabamento e preparação para uma futura série piloto. Para a V1, uma bateria Li-Po 1S de 10.000 mAh, um módulo IP5310 e um INA219 foram comprados em 16/09/2026 e aguardam recebimento/validação. A autonomia mínima pretendida é de duas horas, ainda sujeita a ensaio físico.
+O baseline elétrico atual usa **LiPo Rontek 1S 10 Ah + UPS antigo sem suporte 18650**, preservando switch e distribuição. O responsável confirmou funcionamento estável do conjunto completo, com aproximadamente **4,92 V** na saída do UPS. O IP5310 foi testado e permanece experimental, fora da montagem atual.
 
-As decisões técnicas dessa direção foram tomadas em 15 de setembro de 2026 e consolidadas publicamente em 16 de setembro de 2026. Consulte o [plano de desenvolvimento V1](docs/development/V1_DEVELOPMENT_PLAN.md), o [sistema de energia](docs/electronics/V1_POWER_SYSTEM.md), o [plano da nova case](docs/cad/V1_ENCLOSURE_PLAN.md) e os [critérios de aceitação](docs/development/V1_ACCEPTANCE_PLAN.md).
+O health check de 25/09 encontrou recursos e conectividade disponíveis, mas falha na inicialização do aplicativo e atenção térmica (**73,3–75,6 °C**). As prioridades são corrigir a inicialização, medir o UPS modificado para um Back mais fino e implementar telemetria com INA219. Autonomia mínima de duas horas continua como meta, sem ensaio conclusivo.
+
+A direção inicial de 15–16/09 foi revisada em 25/09/2026 após testes físicos. Consulte o [plano de desenvolvimento V1](docs/development/V1_DEVELOPMENT_PLAN.md), o [sistema de energia](docs/electronics/V1_POWER_SYSTEM.md), o [plano da nova case](docs/cad/V1_ENCLOSURE_PLAN.md) e os [critérios de aceitação](docs/development/V1_ACCEPTANCE_PLAN.md).
 
 ## Visão do produto
 

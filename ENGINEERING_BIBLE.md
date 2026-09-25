@@ -1,5 +1,7 @@
 # Engineering Bible — SatoOne
 
+**Baseline vigente — 2026-09-25:** LiPo 10 Ah + UPS antigo sem suporte 18650; IP5310 apenas experimental. A decisão posterior substitui o plano de 16/09. Ver [registro físico](knowledge/hardware/2026-09-25-power-baseline.md).
+
 Este é o índice normativo da engenharia do SatoOne. Antes de propor, implementar ou diagnosticar qualquer mudança, consulte este arquivo, `PRD.md`, `Constraints.md` e a especificação da disciplina relevante.
 
 ## Fonte da verdade

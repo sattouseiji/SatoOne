@@ -13,7 +13,8 @@ Construa o SatoOne como um produto proprietário, portátil, comercial e offline
 - Recursos disponíveis: 4 GB de RAM e 32 GB de armazenamento interno. Trate RAM, espaço em disco, CPU e temperatura como recursos limitados.
 - Tela atual: Waveshare HDMI de 5", 1024x600, touch capacitivo. Planeje componentes responsivos para a futura tela HDMI IPS de 4", 720x720.
 - V0 comprovada: Radxa, display/touch, teclado, hub, UPS com duas 18650, distribuição 5 V e case impressa funcionais. O ensaio definitivo de autonomia permanece pendente.
-- V1 atual: Li-Po pouch 1S de 10.000 mAh, IP5310 e INA219 foram comprados em 2026-09-16 e estão em trânsito; compra não equivale a validação física ou elétrica.
+- Baseline atual confirmado pelo usuário em 2026-09-25: LiPo 1S 10 Ah → UPS antigo sem suporte 18650 → switch → distribuição existente, ~4,92 V sob carga completa. IP5310 testado, não adotado e apenas experimental; não substituir automaticamente o UPS pelo IP5310. Ver `references/27_power.md`.
+- Preservar a PCB e os componentes do UPS; medir seu envelope/altura modificados antes do novo Back. INA219, autonomia, alertas e shutdown continuam pendentes.
 
 ## Arquitetura
 

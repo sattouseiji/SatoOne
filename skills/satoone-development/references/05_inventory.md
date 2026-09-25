@@ -1,5 +1,7 @@
 # Inventário — 2026-09-16
 
+**Atualização — 2026-09-25:** a montagem vigente é LiPo 10 Ah → UPS antigo sem suporte 18650 → switch → distribuição existente, validada fisicamente conforme relato do responsável. O IP5310 foi testado e não adotado; permanece experimental. Ver [baseline atual](../../../knowledge/hardware/2026-09-25-power-baseline.md). As referências de 16/09 abaixo são históricas; o plano com IP5310 está **SUPERSEDED**.
+
 ## [AVAILABLE] / [PHYSICALLY VALIDATED]
 
 - Radxa Zero 3W, display Waveshare 5DP-CAPLCD-H, BBQ20KBD e hub USB.

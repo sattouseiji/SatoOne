@@ -1,10 +1,20 @@
 # Sistema de energia e telemetria — V1
 
+## Revisão vigente — 2026-09-25
+
+**LiPo 10 Ah → UPS antigo sem suporte 18650 → switch → distribuição existente.** Validada fisicamente conforme relato do responsável: ~4,92 V estáveis com o conjunto completo, sem desligamentos ou brownout observado. Preservar PCB, boost, carga e conectores; não cortar a placa.
+
+LiPo recebida: 111,2 × 64,99 × 10,99 mm medidos; CAD 111,2 × 65,0 × 11,0 mm. Proteção integrada observada. IP5310 testado e não adotado; apenas experimental. INA219, autonomia, alertas e shutdown permanecem pendentes. Ver [evidências e próximos passos](../../knowledge/hardware/2026-09-25-power-baseline.md).
+
+## Histórico de 16/09 — plano IP5310 [SUPERSEDED]
+
+O plano e a sequência de testes abaixo são preservados como histórico; não orientam a montagem atual.
+
 **Direção técnica:** 2026-09-15
 **Compra registrada:** 2026-09-16
 **Estado:** componentes principais [PURCHASED] [IN TRANSIT], entrega prevista até 2026-09-19
 
-## Arquitetura atual [CURRENT DESIGN]
+## Arquitetura proposta em 16/09 [SUPERSEDED]
 
 ```text
 Li-Po Rontek/A58 1S 10 Ah

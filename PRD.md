@@ -6,7 +6,7 @@
 | --- | --- |
 | Produto | SatoOne |
 | Versão | 1.1 (V0 funcional → V1 comercial) |
-| Estado | V0 funcional; hardware de energia V1 comprado/em trânsito e integração pendente |
+| Estado | LiPo 10 Ah + UPS antigo sem holder validados; aplicativo com falha de inicialização; telemetria, autonomia e novo Back pendentes |
 
 ## Objetivo
 

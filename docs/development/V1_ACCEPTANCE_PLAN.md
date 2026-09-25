@@ -24,6 +24,13 @@ Registrar versão do hardware/software, brilho, Wi‑Fi, carga de CPU, periféri
 4. **Sustentado:** executar por pelo menos duas horas.
 5. **Decisão térmica:** adicionar fan somente se os dados exigirem.
 
-## Gate de chegada — 2026-09-19
+## Gate de chegada — 2026-09-19 [histórico; IP5310 SUPERSEDED]
 
 Antes dos gates acima: fotografar/medir Li-Po, IP5310 e INA219; confirmar A58/PCM/polaridade; identificar pinout; testar ~5 V sem carga. Preservar a V0 até a nova cadeia passar pelos testes abertos.
+
+## Situação em 2026-09-25
+
+- **Concluído conforme relato físico:** LiPo recebida/medida, proteção integrada observada, banco 1S confirmado, holder removido, LiPo + UPS antigo e conjunto completo funcionando a ~4,92 V.
+- **Pendente:** ensaio de autonomia, limites das proteções, carga durante uso, telemetria, novo Back e térmica sustentada. A meta de energia acima não significa que tenham sido medidos exatamente 5,0 V.
+- **Aplicativo:** corrigir falha de inicialização antes da aceitação funcional.
+- IP5310 não é requisito da montagem atual. Ver [baseline](../../knowledge/hardware/2026-09-25-power-baseline.md).

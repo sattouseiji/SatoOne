@@ -1,5 +1,5 @@
 # Eletrônica
 
-Manter esquemas, pinagem, orçamento de energia, testes e revisões. Não considerar uma conexão válida sem evidência de tensão, corrente e comportamento térmico.
+A montagem atual usa **LiPo 10 Ah → UPS antigo sem suporte 18650 → switch → distribuição existente**, validada conforme relato físico com ~4,92 V sob carga completa. IP5310 permanece experimental; INA219, autonomia e monitoramento são próximos passos.
 
-A direção elétrica atual está em `V1_POWER_SYSTEM.md`. Li-Po 10 Ah, IP5310 e INA219 foram comprados em 2026-09-16 e aguardam recebimento/validação. A arquitetura UPS/2×18650 pertence à V0 e sua distribuição pós-switch será reaproveitada.
+Ver [sistema de energia](V1_POWER_SYSTEM.md) e [registro físico de 25/09](../../knowledge/hardware/2026-09-25-power-baseline.md).

@@ -1,5 +1,7 @@
 # Energia, bateria e telemetria — 2026-09-16
 
+**Atualização — 2026-09-25:** a montagem vigente é LiPo 10 Ah → UPS antigo sem suporte 18650 → switch → distribuição existente, validada fisicamente conforme relato do responsável. O IP5310 foi testado e não adotado; permanece experimental. Ver [baseline atual](../../../knowledge/hardware/2026-09-25-power-baseline.md). As referências de 16/09 abaixo são históricas; o plano com IP5310 está **SUPERSEDED**.
+
 ## Estados
 
 - [PHYSICALLY VALIDATED]: observado/medido no conjunto real.
@@ -21,7 +23,7 @@
 
 Não repetir intencionalmente o colapso por bateria baixa sem instrumentação e plano de shutdown; o objetivo futuro é desligar o Linux antes desse ponto.
 
-## V1 [CURRENT DESIGN]
+## Plano V1 de 16/09 [SUPERSEDED]
 
 `Li-Po 10 Ah → IP5310 → 5 V → switch existente → distribuição pós-switch existente`.
 

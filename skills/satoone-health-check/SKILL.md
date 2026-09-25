@@ -12,7 +12,7 @@ Usar `../satone-connect/SKILL.md` para conexão, identidade e elevação. Nunca 
 - **Interno:** padrão para diagnóstico. Preservar evidências técnicas suficientes, restringir o arquivo ao ambiente de engenharia e ainda remover credenciais e chaves.
 - **Público comercial:** usar ao publicar no GitHub Pages. Consolidar resultados para compradores, parceiros e financiadores e remover IP, SSID, MAC, portas, usuários, postura SSH/firewall, logs brutos e outros detalhes exploráveis.
 
-Nos dois modos, separar `V0 observada`, `V1 comprada/em trânsito`, `V1 validada` e `meta`. O 1h04 anterior não é autonomia definitiva; Li-Po 10 Ah, IP5310 e INA219 foram comprados em 2026-09-16, mas ainda não foram recebidos/validados. Não apresentar compra como implementação.
+Nos dois modos, separar observação por SSH, validação física relatada, itens pendentes e metas. O 1h04 anterior não é autonomia definitiva. Em 2026-09-25, o usuário confirmou LiPo 10 Ah + UPS antigo sem suporte 18650, com ~4,92 V sob carga completa; IP5310 foi testado e não adotado. INA219 e autonomia continuam pendentes. Consultar `../../knowledge/hardware/2026-09-25-power-baseline.md`; não inferir telemetria de bateria a partir da validação elétrica.
 
 ## Fluxo
 

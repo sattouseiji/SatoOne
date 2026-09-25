@@ -1,5 +1,7 @@
 # Hardware — estado em 2026-09-16
 
+**Atualização — 2026-09-25:** a montagem vigente é LiPo 10 Ah → UPS antigo sem suporte 18650 → switch → distribuição existente, validada fisicamente conforme relato do responsável. O IP5310 foi testado e não adotado; permanece experimental. Ver [baseline atual](../../../knowledge/hardware/2026-09-25-power-baseline.md). As referências de 16/09 abaixo são históricas; o plano com IP5310 está **SUPERSEDED**.
+
 ## V0 funcional [PHYSICALLY VALIDATED]
 
 | Item | Estado atual |
@@ -18,7 +20,7 @@ Vídeo: `Radxa micro-HDMI → adaptador HDMI/flat → cabo flat HDMI → entrada
 
 USB: `Radxa USB → hub → touch Waveshare + teclado`. Touch e teclado funcionam. O USB-C Touch da tela também transportou 5 V/VBUS e conseguiu alimentá-la. A coexistência do Power dedicado com o VBUS do Touch ainda exige validação contra backfeed; não cortar VBUS nem assumir isolamento antes dessa verificação.
 
-## V1 [CURRENT DESIGN]
+## Plano V1 de 16/09 [SUPERSEDED]
 
 Li-Po 1S 10.000 mAh → IP5310 → switch geral → distribuição 5 V já existente. Li-Po, IP5310 e INA219 estão [PURCHASED] [IN TRANSIT], com entrega prevista até 2026-09-19. Não desenhar fixação final nem assumir pinout, medidas, PCM/BMS ou desempenho antes do recebimento e inspeção.
 

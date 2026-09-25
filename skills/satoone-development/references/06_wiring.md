@@ -1,5 +1,7 @@
 # Conexões e distribuição
 
+**Atualização — 2026-09-25:** a montagem vigente é LiPo 10 Ah → UPS antigo sem suporte 18650 → switch → distribuição existente, validada fisicamente conforme relato do responsável. O IP5310 foi testado e não adotado; permanece experimental. Ver [baseline atual](../../../knowledge/hardware/2026-09-25-power-baseline.md). As referências de 16/09 abaixo são históricas; o plano com IP5310 está **SUPERSEDED**.
+
 ## V0 [PHYSICALLY VALIDATED]
 
 ```text
@@ -22,7 +24,7 @@ Os adaptadores USB-C macho → borne são passivos: recebem e repassam aproximad
 
 Chicote Power observado da tela: dois fios vermelhos e um preto. A atribuição planejada é ambos vermelhos em +5 V e preto em GND, mas validar documentação/pinout antes da ligação final.
 
-## V1 [CURRENT DESIGN]
+## Plano V1 de 16/09 [SUPERSEDED]
 
 ```text
 Li-Po 1S 10 Ah → IP5310 → 5 V → switch existente → distribuição existente

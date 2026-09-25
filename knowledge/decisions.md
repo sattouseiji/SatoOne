@@ -43,7 +43,7 @@
 
 - **Data:** 2026-09-15.
 - **Atualização:** 2026-09-16.
-- **Decisão atual:** Li-Po 1S 10.000 mAh + IP5310 antes do switch atual; preservar a distribuição pós-switch; validar INA219 antes/depois do boost.
+- **Decisão de 16/09 [SUPERSEDED por ADR-009 em 25/09]:** Li-Po 1S 10.000 mAh + IP5310 antes do switch atual; preservar a distribuição pós-switch; validar INA219 antes/depois do boost.
 - **Compra:** Li-Po, IP5310 e INA219 [PURCHASED] [IN TRANSIT], entrega prevista até 2026-09-19.
 - **SUPERSEDED:** cadeia genérica charger/boost separados, fusível 7,5 A obrigatório, XT30, AWG18, MAX17048 e INA226 não integram a primeira montagem atual.
 - **Motivo:** volume do UPS/18650, colapso de tensão em bateria baixa e ausência de telemetria no Debian.
@@ -62,3 +62,7 @@
 - **Decisão:** manter switch, GND comum e ramos de +5 V para Radxa, hub e tela; trocar somente bateria/UPS antes do switch.
 - **Evidência:** fiação funciona a aproximadamente 4,8 V com sistema completo e YouTube.
 - **Limite:** validar Power dedicado + VBUS Touch contra backfeed.
+
+## ADR-009 — Baseline elétrico revisado — 2026-09-25
+
+A decisão com IP5310 da ADR-006 está **SUPERSEDED**. Manter LiPo 10 Ah + UPS antigo sem suporte 18650, switch e distribuição existentes. O responsável relatou ~4,92 V estáveis com o sistema completo; a integração por fios/pads do IP5310 não foi igualmente confiável. IP5310 segue experimental. Medir PCB/altura do UPS para CAD; autonomia e INA219 seguem pendentes. Ver [evidências](hardware/2026-09-25-power-baseline.md) e ADR-015 no registro canônico.

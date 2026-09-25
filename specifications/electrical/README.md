@@ -1,5 +1,13 @@
 # Electrical
 
+## Baseline atual — 2026-09-25
+
+**[CURRENT WORKING DESIGN] [PHYSICALLY VALIDATED — relato do responsável]**
+
+`LiPo 1S 10 Ah → UPS antigo sem suporte 18650 → switch → distribuição existente`.
+
+Saída relatada ~4,92 V sob carga completa, sem desligamentos ou brownout observado. Preservar a PCB e seus componentes. IP5310 fora da montagem atual, apenas experimental. [Registro físico e limites](../../knowledge/hardware/2026-09-25-power-baseline.md). As seções abaixo preservam o histórico.
+
 ## V0 [PHYSICALLY VALIDATED]
 
 ```text
@@ -19,7 +27,7 @@
 
 O registro anterior de 1h04 fica **SUPERSEDED como autonomia definitiva**. O ensaio com carga completa iniciado em 2026-09-15 às ~18:40 ainda não possui duração final validada.
 
-## V1 [CURRENT DESIGN]
+## Plano V1 de 16/09 [SUPERSEDED em 25/09]
 
 `Li-Po 1S 10 Ah → IP5310 → 5 V → switch existente → distribuição existente`.
 

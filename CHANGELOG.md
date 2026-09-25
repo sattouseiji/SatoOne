@@ -4,6 +4,19 @@ O projeto segue versionamento incremental. Registre decisões, marcos e mudança
 
 ## [Unreleased]
 
+### Alimentação atual e health check — 2026-09-25
+
+- Registrada LiPo 10 Ah com UPS antigo sem suporte 18650 como baseline validado: ~4,92 V sob carga completa, conforme relato físico; IP5310 experimental.
+- Atualizadas medidas para CAD, inventário e roadmap: Back mais fino, autonomia e telemetria pendentes.
+- Publicado health check resumido: recursos e rede disponíveis; inicialização do aplicativo falhando e atenção térmica. Nenhuma correção aplicada ao dispositivo.
+
+### Health check operacional — 2026-09-17
+
+- Registradas medições atuais de recursos, térmica e reconhecimento de periféricos, com limites de carga e acesso explícitos.
+- Confirmada a raiz em microSD de 59,5 GiB e a presença separada da eMMC de 29,1 GiB; cartão adicionado ao inventário como observado, sem inferir compra ou fabricante.
+- Documentada divergência entre o ambiente de aplicação esperado e o sistema em execução, sem concluir perda de arquivos.
+- Mantidas evidências e pendências operacionais detalhadas em relatório interno excluído do versionamento; nenhuma alteração executada no dispositivo.
+
 ### Contato e acompanhamento pré-lançamento — 2026-09-16
 
 - Adicionado contato público por e-mail para interessados, parceiros e potenciais compradores.

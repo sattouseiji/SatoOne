@@ -2,7 +2,7 @@
 
 **Versão:** 1.3
 **Status:** Registro canônico de decisões  
-**Última atualização:** 2026-09-16
+**Última atualização:** 2026-09-25
 
 ## Propósito e regra
 
@@ -23,7 +23,8 @@ Registrar por que cada decisão relevante foi tomada, as alternativas avaliadas,
 | ADR-009 | Gabinete modular e reparável | Aceita | Nenhum; princípio de produto |
 | ADR-010 | Knowledge base e skills | Aceita | Processo comprovadamente inadequado |
 | ADR-011 | Produto proprietário com desenvolvimento público | Aceita | Estratégia comercial formal mudar |
-| ADR-012 | Li‑Po 1S 10.000 mAh e nova cadeia de energia V1 | Em validação | Teste elétrico ou fornecedor inviabilizar |
+| ADR-012 | Li‑Po 1S 10.000 mAh e IP5310 | SUPERSEDED por ADR-015 | Histórico preservado |
+| ADR-015 | LiPo 10 Ah + UPS antigo sem holder | Validada fisicamente — relato | Nova evidência elétrica ou mecânica |
 | ADR-013 | Telemetria de bateria integrada ao Debian | Em validação | Driver/kernel ou precisão insuficientes |
 | ADR-014 | Case V1 menor com cooling orientado por testes | Em validação | CAD, segurança ou térmica inviabilizar |
 
@@ -111,7 +112,7 @@ Registrar por que cada decisão relevante foi tomada, as alternativas avaliadas,
 
 - **Data:** 2026-09-15.
 - **Atualização:** 2026-09-16.
-- **Decisão atual:** Li-Po 1S 10.000 mAh → IP5310 → switch mecânico existente → distribuição 5 V existente.
+- **Decisão de 16/09 [SUPERSEDED por ADR-015 em 25/09]:** Li-Po 1S 10.000 mAh → IP5310 → switch mecânico existente → distribuição 5 V existente.
 - **Motivo:** reduzir o volume do LX-2BUPS/18650 e preservar o trecho pós-switch já funcional.
 - **Compra:** Li-Po e IP5310 [PURCHASED] [IN TRANSIT], entrega prevista até 2026-09-19.
 - **SUPERSEDED:** charger/boost separados, fusível obrigatório de 7,5 A, XT30, AWG18 e comutação por `EN` não integram a primeira montagem atual.
@@ -133,6 +134,15 @@ Registrar por que cada decisão relevante foi tomada, as alternativas avaliadas,
 - **Decisão:** colocar a bateria pouch atrás do teclado, reduzir espessura e priorizar dissipação passiva; reservar fan de 30 mm apenas se testes exigirem.
 - **Meta preliminar:** região da bateria entre 25 e 28 mm; SoC sustentado ≤75 °C sem throttling.
 - **Limite:** metas dependem de CAD, folgas de segurança e validação física.
+
+### ADR-015 — Manter UPS antigo com LiPo 10 Ah
+
+- **Registro:** 2026-09-25; substitui o plano com IP5310 da ADR-012.
+- **Decisão:** LiPo 1S → UPS antigo sem suporte 18650 → switch → distribuição existente.
+- **Motivo/evidência:** responsável confirmou ~4,92 V e funcionamento estável com o conjunto completo; IP5310 por fios/pads não apresentou a mesma confiabilidade.
+- **Limites:** autonomia e telemetria pendentes; proteção integrada observada, sem ensaio dos seus limiares.
+- **Próximo passo:** medir PCB/altura do UPS, posicionar LiPo e UPS no mesmo plano e reduzir o Back. Não cortar PCB ou remover eletrônica funcional.
+- **Fonte:** [registro físico e limites](knowledge/hardware/2026-09-25-power-baseline.md).
 
 ## Template
 

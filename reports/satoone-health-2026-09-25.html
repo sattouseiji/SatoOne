@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SatoOne — Alimentação e health check · 25/09/2026</title>
+<meta name="description" content="LiPo 10 Ah integrada ao UPS existente, resultados resumidos do health check e próximos passos do SatoOne.">
+<style>
+:root{color-scheme:dark;--bg:#080d0b;--panel:#101b16;--line:#30483b;--text:#edf6f0;--muted:#b4c7bc;--green:#7ce8b0;--amber:#ffda8a;--red:#ffa4a4}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 system-ui,Segoe UI,sans-serif}main{max-width:1000px;margin:auto;padding:36px 22px 60px}a{color:var(--green)}h1{font-size:clamp(32px,6vw,56px);line-height:1.1;letter-spacing:-.04em;margin:16px 0}h2{font-size:24px;margin:30px 0 14px}p{margin:10px 0}.muted,small{color:var(--muted)}.eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:12px;color:var(--green)}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin:26px 0}.card,section{padding:22px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.card strong{font-size:29px;display:block}.flow{border-left:3px solid var(--green);padding:14px 20px;background:#17271e;font-weight:650}section{margin:18px 0}section h2{margin-top:0}.ok{color:var(--green)}.warn{color:var(--amber)}.bad{color:var(--red)}li{margin:9px 0}.table{overflow-x:auto}table{border-collapse:collapse;width:100%;min-width:530px}td,th{padding:12px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{font-size:13px;color:var(--muted)}footer{margin-top:28px;font-size:13px;color:var(--muted)}@media print{body{background:#fff;color:#111}section,.card,.flow{background:#fff;border-color:#aaa}a,.ok,.warn,.bad,.muted,small,th,footer{color:#222}}
+</style>
+</head>
+<body><main>
+<a href="../index.html">← SatoOne</a>
+<header><p class="eyebrow">Atualização pública · 25 setembro 2026</p><h1>Alimentação validada.<br>Software em ajuste.</h1><p class="muted">Resumo da validação física relatada pelo responsável e do health check realizado às 14:12–14:14, horário de Brasília.</p></header>
+<div class="cards">
+<div class="card"><small>Saída do UPS sob carga completa</small><strong>~4,92 V</strong><small>Medição física relatada</small></div>
+<div class="card"><small>Bateria integrada</small><strong>LiPo 10 Ah</strong><small>Capacidade nominal; autonomia pendente</small></div>
+<div class="card"><small>Temperatura do SoC na coleta</small><strong class="warn">73,3–75,6 °C</strong><small>Atenção térmica; sem ensaio sustentado</small></div>
+</div>
+<section><h2>Montagem atual</h2><p class="flow">LiPo 1S → UPS antigo sem suporte 18650 → switch → distribuição existente</p><p>O responsável confirmou operação estável com Radxa, display, touch, hub e teclado, sem desligamentos ou brownout observado. A bateria permaneceu fria e o UPS em temperatura normal, conforme observação qualitativa.</p><p>A LiPo Rontek mede <strong>111,2 × 64,99 × 10,99 mm</strong>; referência para CAD: <strong>111,2 × 65,0 × 11,0 mm</strong>. A proteção integrada foi observada fisicamente.</p><p><strong>IP5310:</strong> testado e não adotado na montagem atual; permanece experimental. A PCB e os componentes eletrônicos do UPS existente serão preservados.</p></section>
+<section><h2>Health check resumido</h2><div class="table"><table><thead><tr><th>Estado</th><th>Resultado</th></tr></thead><tbody>
+<tr><td class="ok">Saudável na amostra</td><td>3,2 GiB de memória disponíveis, swap sem uso, armazenamento com 29% de ocupação, conectividade e DNS funcionando.</td></tr>
+<tr><td class="bad">Crítico · aplicativo</td><td>Falha recorrente na inicialização. Correção e validação funcional pendentes.</td></tr>
+<tr><td class="warn">Atenção</td><td>Temperatura do SoC elevada na carga observada e pendências de serviços e manutenção.</td></tr>
+<tr><td>Não verificável</td><td>Carga e autonomia da bateria pelo Linux. Periféricos reconhecidos; interação física e áudio não ensaiados.</td></tr>
+</tbody></table></div><p class="muted">Nenhuma correção foi aplicada durante a auditoria. A validação elétrica relatada é distinta da coleta por software. O teste não comprova autonomia, capacidade efetiva ou estabilidade prolongada.</p></section>
+<section><h2>Próximos passos</h2><ol>
+<li>Corrigir a inicialização do aplicativo e repetir o teste funcional.</li>
+<li>Medir a PCB e a altura máxima do UPS modificado; planejar LiPo e UPS no mesmo plano para um Back mais fino.</li>
+<li>Prever fixação removível da bateria, acesso à USB-C de carga e organização dos cabos.</li>
+<li>Integrar INA219, monitoramento, alerta de bateria baixa e desligamento seguro; medir autonomia e térmica.</li>
+</ol><p>Autonomia de duas horas segue como <strong>meta</strong>. Novo Back, telemetria e refrigeração revisada ainda não estão validados.</p></section>
+<footer>Protótipo em desenvolvimento · <a href="../docs/development/V1_DEVELOPMENT_PLAN.md">Plano atualizado</a> · <a href="https://github.com/sattouseiji/SatoOne">Projeto no GitHub</a><br>Relatório público consolidado. Resultados físicos atribuídos ao responsável; métricas de software obtidas por coleta pontual. © 2026 SatoOne.</footer>
+</main></body></html>

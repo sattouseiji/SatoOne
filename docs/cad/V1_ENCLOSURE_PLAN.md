@@ -9,9 +9,9 @@ A V0 definitiva possui envelope externo anteriormente registrado de aproximadame
 
 ## Objetivos
 
-- remover o volume ocupado pelo UPS e pelas duas células 18650;
-- posicionar a Li‑Po pouch atrás da região do teclado;
-- reduzir significativamente a espessura usando a pouch/IP5310 compactos, sem definir número final antes de medir as peças recebidas;
+- aproveitar o UPS antigo com suporte 18650 já removido, preservando toda a PCB e sua eletrônica;
+- posicionar LiPo e UPS preferencialmente no mesmo plano, evitando empilhamento;
+- usar a LiPo medida (CAD: 111,2 × 65,0 × 11,0 mm) e medir dimensões/altura máxima do UPS modificado antes de definir a espessura final;
 - manter bateria, eletrônica e cabos removíveis e sem compressão;
 - preservar acesso a USB-C, HDMI, microSD, áudio, UART e GPIO relevantes;
 - melhorar entradas, saídas e caminho de ar;
@@ -29,4 +29,4 @@ A V0 definitiva possui envelope externo anteriormente registrado de aproximadame
 
 Criar uma nova fonte paramétrica para a V1; nunca editar os STLs V0 como se fossem fonte. Antes da impressão completa, produzir coupons para bateria, conectores, standoffs, ventilação, insertos e passagem de cabos.
 
-Não iniciar o encaixe final enquanto Li-Po, IP5310 e INA219 estiverem em trânsito. Preservar no novo layout o conhecimento da V0: hub próximo à parede, Radxa no lado antes ocupado pelo hub, ventilação alinhada à Radxa, pitch Radxa 58 × 23 mm/postes 10 mm e hub 52 × 15,25 mm.
+Atualização de 25/09: LiPo recebida e medida; IP5310 fora da montagem. Medir a PCB real do UPS sem holder e seus componentes antes do encaixe final. Prever fixação segura e removível da LiPo, folgas, USB-C de carga acessível e organização dos cabos. Preservar no novo layout o conhecimento da V0: hub próximo à parede, Radxa no lado antes ocupado pelo hub, ventilação alinhada à Radxa, pitch Radxa 58 × 23 mm/postes 10 mm e hub 52 × 15,25 mm.
